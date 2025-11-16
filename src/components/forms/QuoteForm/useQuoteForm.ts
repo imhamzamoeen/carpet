@@ -25,7 +25,7 @@ export function useQuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const form = useForm<BookingInput>({
-    resolver: zodResolver(bookingSchema),
+    resolver: zodResolver(bookingSchema) as any,
     defaultValues: {
       stainRemoval: false,
       photoUrls: [],

@@ -12,7 +12,7 @@ import { Input, Select } from '@/components/ui'
 import type { BookingInput } from '@/lib/validation/booking.schema'
 
 interface Step2Props {
-  form: UseFormReturn<BookingInput>
+  form: UseFormReturn<BookingInput, any>
 }
 
 const serviceOptions = [

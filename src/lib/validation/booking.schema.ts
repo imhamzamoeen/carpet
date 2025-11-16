@@ -80,13 +80,9 @@ export const bookingSchema = z.object({
     .transform(val => val.toUpperCase().trim()),
 
   // Service Details
-  serviceType: z.enum(serviceTypes, {
-    errorMap: () => ({ message: 'Please select a valid service type' })
-  }),
+  serviceType: z.enum(serviceTypes),
 
-  propertyType: z.enum(propertyTypes, {
-    errorMap: () => ({ message: 'Please select a valid property type' })
-  }),
+  propertyType: z.enum(propertyTypes),
 
   propertySize: z.enum(propertySizes).optional(),
 

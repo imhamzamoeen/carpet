@@ -1,0 +1,22 @@
+# robots.txt for Fresh Fiber Carpet Cleaning Manchester
+# Optimized for search engine crawling and AI-powered search (GPTBot, Bingbot)
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*.json$
+
+# Allow important bots for AI-powered search
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://freshfibercleaning.co.uk/sitemap.xml

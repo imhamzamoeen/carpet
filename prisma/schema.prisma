@@ -235,3 +235,21 @@ model Setting {
 
   @@map("settings")
 }
+
+model ContactMessage {
+  id              String   @id @default(uuid())
+  createdAt       DateTime @default(now())
+
+  name            String
+  email           String
+  phone           String
+  subject         String
+  message         String   @db.Text
+
+  isRead          Boolean  @default(false)
+  adminNotes      String?  @db.Text
+
+  @@map("contact_messages")
+  @@index([createdAt])
+  @@index([isRead])
+}

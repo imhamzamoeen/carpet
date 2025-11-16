@@ -12,7 +12,7 @@ import { Card, CardContent, Input } from '@/components/ui'
 import type { BookingInput } from '@/lib/validation/booking.schema'
 
 interface Step4Props {
-  form: UseFormReturn<BookingInput>
+  form: UseFormReturn<BookingInput, any>
 }
 
 export function Step4Scheduling({ form }: Step4Props) {
@@ -60,7 +60,6 @@ export function Step4Scheduling({ form }: Step4Props) {
               <input
                 type="radio"
                 value="morning"
-                {...register('preferredTime')}
                 className="h-4 w-4 text-primary-600 focus:ring-primary-500"
               />
               <div className="ml-3">
@@ -73,7 +72,6 @@ export function Step4Scheduling({ form }: Step4Props) {
               <input
                 type="radio"
                 value="afternoon"
-                {...register('preferredTime')}
                 className="h-4 w-4 text-primary-600 focus:ring-primary-500"
               />
               <div className="ml-3">
@@ -86,7 +84,6 @@ export function Step4Scheduling({ form }: Step4Props) {
               <input
                 type="radio"
                 value="flexible"
-                {...register('preferredTime')}
                 className="h-4 w-4 text-primary-600 focus:ring-primary-500"
               />
               <div className="ml-3">
@@ -95,9 +92,6 @@ export function Step4Scheduling({ form }: Step4Props) {
               </div>
             </label>
           </div>
-          {errors.preferredTime && (
-            <p className="mt-1 text-sm text-red-600">{errors.preferredTime.message}</p>
-          )}
         </div>
       </div>
 

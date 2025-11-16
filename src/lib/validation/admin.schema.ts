@@ -151,9 +151,7 @@ export const faqSchema = z.object({
     .min(20, 'Answer must be at least 20 characters')
     .max(2000, 'Answer is too long'),
 
-  category: z.enum(['booking', 'pricing', 'services', 'general'], {
-    errorMap: () => ({ message: 'Please select a valid category' })
-  }),
+  category: z.enum(['booking', 'pricing', 'services', 'general']),
 
   displayOrder: z.number().int().min(0).default(0),
 
@@ -227,9 +225,7 @@ export const settingSchema = z.object({
   value: z.string()
     .max(1000, 'Value is too long'),
 
-  type: z.enum(['number', 'string', 'boolean', 'json'], {
-    errorMap: () => ({ message: 'Please select a valid type' })
-  }),
+  type: z.enum(['number', 'string', 'boolean', 'json']),
 
   description: z.string()
     .max(500)

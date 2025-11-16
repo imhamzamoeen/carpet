@@ -8,10 +8,11 @@ import React from 'react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui'
 import { prisma } from '@/lib/db'
+import { BookingStatus } from '@prisma/client'
 
 async function getQuotes() {
   try {
-    const quotes = await prisma.quote.findMany({
+    const quotes = await prisma.booking.findMany({
       orderBy: { createdAt: 'desc' },
       take: 100
     })
@@ -54,7 +55,7 @@ export default async function AdminQuotesPage() {
                     <th className="text-left py-3 px-4 font-medium text-gray-900">Service Cost</th>
                     <th className="text-left py-3 px-4 font-medium text-gray-900">Travel Cost</th>
                     <th className="text-left py-3 px-4 font-medium text-gray-900">Total</th>
-                    <th className="text-left py-3 px-4 font-medium text-gray-900">Converted</th>
+                    <th className="text-left py-3 px-4 font-medium text-gray-900">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -104,15 +105,15 @@ export default async function AdminQuotesPage() {
                         £{quote.totalCost.toFixed(2)}
                       </td>
                       <td className="py-3 px-4">
-                        {quote.converted ? (
-                          <span className="inline-block rounded-full px-3 py-1 text-xs font-medium bg-green-100 text-green-800">
-                            Yes
-                          </span>
-                        ) : (
-                          <span className="inline-block rounded-full px-3 py-1 text-xs font-medium bg-gray-100 text-gray-600">
-                            No
-                          </span>
-                        )}
+                        <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${
+                          quote.status === BookingStatus.PENDING ? 'bg-yellow-100 text-yellow-800' :
+                          quote.status === BookingStatus.CONFIRMED ? 'bg-green-100 text-green-800' :
+                          quote.status === BookingStatus.IN_PROGRESS ? 'bg-blue-100 text-blue-800' :
+                          quote.status === BookingStatus.COMPLETED ? 'bg-gray-100 text-gray-800' :
+                          'bg-red-100 text-red-800'
+                        }`}>
+                          {quote.status}
+                        </span>
                       </td>
                     </tr>
                   ))}
@@ -137,14 +138,14 @@ export default async function AdminQuotesPage() {
         </Card>
         <Card>
           <CardContent className="p-6">
-            <p className="text-sm font-medium text-gray-600">Converted</p>
+            <p className="text-sm font-medium text-gray-600">Confirmed</p>
             <p className="mt-2 text-2xl font-bold text-green-600">
-              {quotes.filter((q) => q.converted).length}
+              {quotes.filter((q) => q.status === BookingStatus.CONFIRMED || q.status === BookingStatus.COMPLETED).length}
             </p>
             <p className="text-xs text-gray-500 mt-1">
               {quotes.length > 0
-                ? `${((quotes.filter((q) => q.converted).length / quotes.length) * 100).toFixed(1)}% conversion`
-                : '0% conversion'}
+                ? `${((quotes.filter((q) => q.status === BookingStatus.CONFIRMED || q.status === BookingStatus.COMPLETED).length / quotes.length) * 100).toFixed(1)}% confirmed`
+                : '0% confirmed'}
             </p>
           </CardContent>
         </Card>
@@ -152,7 +153,7 @@ export default async function AdminQuotesPage() {
           <CardContent className="p-6">
             <p className="text-sm font-medium text-gray-600">Pending</p>
             <p className="mt-2 text-2xl font-bold text-yellow-600">
-              {quotes.filter((q) => !q.converted).length}
+              {quotes.filter((q) => q.status === BookingStatus.PENDING).length}
             </p>
           </CardContent>
         </Card>
@@ -162,7 +163,7 @@ export default async function AdminQuotesPage() {
             <p className="mt-2 text-2xl font-bold text-gray-900">
               £
               {quotes
-                .filter((q) => !q.converted)
+                .filter((q) => q.status === BookingStatus.PENDING)
                 .reduce((sum, q) => sum + q.totalCost, 0)
                 .toFixed(2)}
             </p>

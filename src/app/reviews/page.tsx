@@ -299,7 +299,7 @@ export default function ReviewsPage() {
                             className="h-5 w-5 text-blue-500"
                             fill="currentColor"
                             viewBox="0 0 20 20"
-                            title="Verified Customer"
+                            aria-label="Verified Customer"
                           >
                             <path
                               fillRule="evenodd"

@@ -7,17 +7,17 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui'
 import { prisma } from '@/lib/db'
+import { BookingStatus } from '@prisma/client'
 
 async function getDashboardStats() {
   try {
-    const [totalBookings, pendingBookings, totalQuotes, todayQuotes, totalContacts] =
+    const [totalBookings, pendingBookings, todayBookings, totalContacts] =
       await Promise.all([
         prisma.booking.count(),
         prisma.booking.count({
-          where: { status: 'pending' }
+          where: { status: BookingStatus.PENDING }
         }),
-        prisma.quote.count(),
-        prisma.quote.count({
+        prisma.booking.count({
           where: {
             createdAt: {
               gte: new Date(new Date().setHours(0, 0, 0, 0))
@@ -30,8 +30,7 @@ async function getDashboardStats() {
     return {
       totalBookings,
       pendingBookings,
-      totalQuotes,
-      todayQuotes,
+      todayBookings,
       totalContacts
     }
   } catch (error) {
@@ -39,8 +38,7 @@ async function getDashboardStats() {
     return {
       totalBookings: 0,
       pendingBookings: 0,
-      totalQuotes: 0,
-      todayQuotes: 0,
+      todayBookings: 0,
       totalContacts: 0
     }
   }
@@ -48,41 +46,30 @@ async function getDashboardStats() {
 
 async function getRecentActivity() {
   try {
-    const [recentBookings, recentQuotes] = await Promise.all([
-      prisma.booking.findMany({
-        take: 5,
-        orderBy: { createdAt: 'desc' },
-        select: {
-          id: true,
-          name: true,
-          serviceType: true,
-          status: true,
-          createdAt: true
-        }
-      }),
-      prisma.quote.findMany({
-        take: 5,
-        orderBy: { createdAt: 'desc' },
-        select: {
-          id: true,
-          serviceType: true,
-          postcode: true,
-          totalCost: true,
-          createdAt: true
-        }
-      })
-    ])
+    const recentBookings = await prisma.booking.findMany({
+      take: 10,
+      orderBy: { createdAt: 'desc' },
+      select: {
+        id: true,
+        name: true,
+        serviceType: true,
+        status: true,
+        postcode: true,
+        totalCost: true,
+        createdAt: true
+      }
+    })
 
-    return { recentBookings, recentQuotes }
+    return { recentBookings }
   } catch (error) {
     console.error('Error fetching recent activity:', error)
-    return { recentBookings: [], recentQuotes: [] }
+    return { recentBookings: [] }
   }
 }
 
 export default async function AdminDashboard() {
   const stats = await getDashboardStats()
-  const { recentBookings, recentQuotes } = await getRecentActivity()
+  const { recentBookings } = await getRecentActivity()
 
   return (
     <div className="space-y-8">
@@ -138,8 +125,8 @@ export default async function AdminDashboard() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Total Quotes</p>
-                <p className="mt-2 text-3xl font-bold text-gray-900">{stats.totalQuotes}</p>
+                <p className="text-sm font-medium text-gray-600">Total Bookings</p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">{stats.totalBookings}</p>
               </div>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                 <svg className="h-6 w-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -159,8 +146,8 @@ export default async function AdminDashboard() {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Today's Quotes</p>
-                <p className="mt-2 text-3xl font-bold text-gray-900">{stats.todayQuotes}</p>
+                <p className="text-sm font-medium text-gray-600">Today's Bookings</p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">{stats.todayBookings}</p>
               </div>
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-purple-100">
                 <svg className="h-6 w-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
@@ -201,9 +188,9 @@ export default async function AdminDashboard() {
                     </div>
                     <span
                       className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${
-                        booking.status === 'pending'
+                        booking.status === BookingStatus.PENDING
                           ? 'bg-yellow-100 text-yellow-800'
-                          : booking.status === 'confirmed'
+                          : booking.status === BookingStatus.CONFIRMED
                           ? 'bg-green-100 text-green-800'
                           : 'bg-gray-100 text-gray-800'
                       }`}
@@ -220,38 +207,7 @@ export default async function AdminDashboard() {
         </Card>
 
         {/* Recent Quotes */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Recent Quotes</CardTitle>
-          </CardHeader>
-          <CardContent>
-            {recentQuotes.length > 0 ? (
-              <div className="space-y-4">
-                {recentQuotes.map((quote) => (
-                  <div
-                    key={quote.id}
-                    className="flex items-center justify-between border-b border-gray-100 pb-4 last:border-0 last:pb-0"
-                  >
-                    <div>
-                      <p className="font-medium text-gray-900">
-                        {quote.serviceType.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
-                      </p>
-                      <p className="text-sm text-gray-600">{quote.postcode}</p>
-                      <p className="text-xs text-gray-500">
-                        {new Date(quote.createdAt).toLocaleDateString()}
-                      </p>
-                    </div>
-                    <span className="font-semibold text-primary-600">
-                      £{quote.totalCost.toFixed(2)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="text-gray-500">No recent quotes</p>
-            )}
-          </CardContent>
-        </Card>
+
       </div>
     </div>
   )

@@ -17,7 +17,11 @@
       "Bash(git push:*)",
       "Bash(dir \"c:\\laragon\\www\\Carpet\\.claude\\BMad\" /s)",
       "Bash(dir:*)",
-      "Bash(npm run prisma:generate:*)"
+      "Bash(npm run prisma:generate:*)",
+      "Bash(find:*)",
+      "Bash(node -e:*)",
+      "Bash(timeout /t 10 /nobreak)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

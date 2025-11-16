@@ -55,7 +55,7 @@ export default function ContactPage() {
       } else {
         setSubmitStatus({
           type: 'error',
-          message: result.error || 'Failed to send message. Please try again.'
+          message: result.message || 'Failed to send message. Please try again.'
         })
       }
     } catch (error) {
@@ -203,7 +203,7 @@ export default function ContactPage() {
 
               <Button
                 type="submit"
-                variant="primary"
+                variant="default"
                 disabled={isSubmitting}
                 className="w-full"
               >

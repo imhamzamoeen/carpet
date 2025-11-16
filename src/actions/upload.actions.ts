@@ -32,7 +32,7 @@ export async function uploadBookingPhoto(formData: FormData) {
     if (!validation.success) {
       return {
         success: false,
-        error: validation.error.errors[0].message
+        error: validation.error.issues[0]?.message || 'Invalid file'
       }
     }
 
@@ -147,7 +147,7 @@ export async function uploadGalleryImage(formData: FormData) {
     if (!validation.success) {
       return {
         success: false,
-        error: validation.error.errors[0].message
+        error: validation.error.issues[0]?.message || 'Invalid file'
       }
     }
 
@@ -219,7 +219,7 @@ export async function uploadBlogImage(formData: FormData) {
     if (!validation.success) {
       return {
         success: false,
-        error: validation.error.errors[0].message
+        error: validation.error.issues[0]?.message || 'Invalid file'
       }
     }
 

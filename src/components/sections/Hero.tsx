@@ -29,16 +29,17 @@ export function Hero() {
             <span>Eco-Friendly Products</span>
           </div>
 
-          {/* Main Heading */}
+          {/* Main Heading - SEO Optimized for "Fresh Fiber Carpet Cleaning Manchester" */}
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Professional Carpet Cleaning in{' '}
+            <span className="text-yellow-400">FreshFiber</span> Carpet Cleaning{' '}
             <span className="text-yellow-400">Manchester</span>
           </h1>
 
-          {/* Subheading */}
+          {/* Subheading - Optimized for user intent and semantic SEO */}
           <p className="mt-6 text-lg leading-8 text-primary-100">
-            Expert deep cleaning for carpets, rugs, upholstery, and more. Get an instant quote
-            online and book your service today. Serving Manchester and within 100 miles.
+            Professional carpet, rug, and upholstery deep cleaning services in Manchester.
+            Get an instant quote in 60 seconds, book same-day service, and enjoy our 100%
+            satisfaction guarantee. Eco-friendly products, serving within 100 miles.
           </p>
 
           {/* CTA Buttons */}

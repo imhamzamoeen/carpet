@@ -204,7 +204,7 @@ export default function ServicePage({ params }: ServicePageProps) {
 
                   <div className="mt-6">
                     <Link href="/quote" className="block">
-                      <Button variant="primary" className="w-full">
+                      <Button variant="default" className="w-full">
                         Get Your Quote
                       </Button>
                     </Link>
@@ -308,7 +308,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="/quote">
-                <Button size="lg" variant="primary">
+                <Button size="lg" variant="default">
                   Get Instant Quote
                 </Button>
               </Link>

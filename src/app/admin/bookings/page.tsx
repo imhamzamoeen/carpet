@@ -8,6 +8,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui'
 import { prisma } from '@/lib/db'
+import { BookingStatus } from '@prisma/client'
 
 async function getBookings() {
   try {
@@ -85,7 +86,12 @@ export default async function AdminBookingsPage() {
                       </td>
                       <td className="py-3 px-4 text-gray-600">
                         {new Date(booking.preferredDate).toLocaleDateString('en-GB')}
-                        <p className="text-xs text-gray-500 capitalize">{booking.preferredTime}</p>
+                        <p className="text-xs text-gray-500">
+                          {new Date(booking.preferredDate).toLocaleTimeString('en-GB', {
+                            hour: '2-digit',
+                            minute: '2-digit'
+                          })}
+                        </p>
                       </td>
                       <td className="py-3 px-4 font-semibold text-gray-900">
                         £{booking.totalCost.toFixed(2)}
@@ -126,7 +132,7 @@ export default async function AdminBookingsPage() {
           <CardContent className="p-6">
             <p className="text-sm font-medium text-gray-600">Pending</p>
             <p className="mt-2 text-2xl font-bold text-yellow-600">
-              {bookings.filter((b) => b.status === 'pending').length}
+              {bookings.filter((b) => b.status === BookingStatus.PENDING).length}
             </p>
           </CardContent>
         </Card>
@@ -134,7 +140,7 @@ export default async function AdminBookingsPage() {
           <CardContent className="p-6">
             <p className="text-sm font-medium text-gray-600">Confirmed</p>
             <p className="mt-2 text-2xl font-bold text-green-600">
-              {bookings.filter((b) => b.status === 'confirmed').length}
+              {bookings.filter((b) => b.status === BookingStatus.CONFIRMED).length}
             </p>
           </CardContent>
         </Card>
@@ -142,7 +148,7 @@ export default async function AdminBookingsPage() {
           <CardContent className="p-6">
             <p className="text-sm font-medium text-gray-600">Completed</p>
             <p className="mt-2 text-2xl font-bold text-blue-600">
-              {bookings.filter((b) => b.status === 'completed').length}
+              {bookings.filter((b) => b.status === BookingStatus.COMPLETED).length}
             </p>
           </CardContent>
         </Card>
@@ -152,7 +158,7 @@ export default async function AdminBookingsPage() {
             <p className="mt-2 text-2xl font-bold text-gray-900">
               £
               {bookings
-                .filter((b) => b.status === 'completed')
+                .filter((b) => b.status === BookingStatus.COMPLETED)
                 .reduce((sum, b) => sum + b.totalCost, 0)
                 .toFixed(2)}
             </p>

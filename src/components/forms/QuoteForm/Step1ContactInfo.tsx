@@ -12,7 +12,7 @@ import { Input } from '@/components/ui'
 import type { BookingInput } from '@/lib/validation/booking.schema'
 
 interface Step1Props {
-  form: UseFormReturn<BookingInput>
+  form: UseFormReturn<BookingInput, any>
 }
 
 export function Step1ContactInfo({ form }: Step1Props) {

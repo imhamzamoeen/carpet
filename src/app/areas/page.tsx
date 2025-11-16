@@ -268,7 +268,7 @@ export default function AreasPage() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link href="/quote">
-                <Button size="lg" variant="primary">
+                <Button size="lg" variant="default">
                   Check Your Postcode
                 </Button>
               </Link>

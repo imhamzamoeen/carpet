@@ -177,11 +177,11 @@ export default async function BookingDetailPage({
                   <p className="mt-1 text-gray-900">{booking.distance.toFixed(1)} miles</p>
                 </div>
               </div>
-              {booking.specialRequirements && (
+              {booking.additionalNotes && (
                 <div>
-                  <p className="text-sm font-medium text-gray-600">Special Requirements</p>
+                  <p className="text-sm font-medium text-gray-600">Additional Notes</p>
                   <p className="mt-1 text-gray-700 bg-gray-50 p-3 rounded-lg border border-gray-100">
-                    {booking.specialRequirements}
+                    {booking.additionalNotes}
                   </p>
                 </div>
               )}
@@ -208,7 +208,12 @@ export default async function BookingDetailPage({
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-600">Preferred Time</p>
-                  <p className="mt-1 text-gray-900 capitalize">{booking.preferredTime}</p>
+                  <p className="mt-1 text-gray-900">
+                    {new Date(booking.preferredDate).toLocaleTimeString('en-GB', {
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}
+                  </p>
                 </div>
               </div>
             </CardContent>

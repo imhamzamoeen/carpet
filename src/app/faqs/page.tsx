@@ -291,7 +291,7 @@ export default function FAQsPage() {
                 </p>
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
                   <Link href="/contact">
-                    <Button size="lg" variant="primary">
+                    <Button size="lg" variant="default">
                       Contact Us
                     </Button>
                   </Link>

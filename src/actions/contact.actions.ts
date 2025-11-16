@@ -8,7 +8,7 @@
 
 import nodemailer from 'nodemailer'
 import { contactFormSchema, reviewSubmissionSchema } from '@/lib/validation/contact.schema'
-import { prisma } from '@/lib/prisma'
+import { prisma } from '@/lib/db'
 import { revalidatePath } from 'next/cache'
 import type { z } from 'zod'
 
@@ -16,7 +16,7 @@ import type { z } from 'zod'
  * Create nodemailer transporter
  */
 function createTransporter() {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: false,

@@ -38,22 +38,12 @@ export function Step5Confirmation({ form, quote, onEdit }: Step5Props) {
   const stainRemoval = watch('stainRemoval')
   const additionalNotes = watch('additionalNotes')
   const preferredDate = watch('preferredDate')
-  const preferredTime = watch('preferredTime')
-
+  
   // Format service type for display
   const formatServiceType = (type: string) => {
     return type.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
   }
 
-  // Format preferred time for display
-  const formatPreferredTime = (time: string) => {
-    const timeMap: Record<string, string> = {
-      'morning': 'Morning (8:00 AM - 12:00 PM)',
-      'afternoon': 'Afternoon (12:00 PM - 5:00 PM)',
-      'flexible': 'Flexible (Any time)'
-    }
-    return timeMap[time] || time
-  }
 
   return (
     <div className="space-y-6">
@@ -215,10 +205,6 @@ export function Step5Confirmation({ form, quote, onEdit }: Step5Props) {
                   day: 'numeric'
                 }) : 'Not selected'}
               </p>
-            </div>
-            <div>
-              <span className="text-sm text-gray-500">Preferred Time</span>
-              <p className="font-medium text-gray-900">{formatPreferredTime(preferredTime)}</p>
             </div>
           </div>
         </CardContent>

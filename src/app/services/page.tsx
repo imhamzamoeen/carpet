@@ -313,7 +313,7 @@ export default function ServicesPage() {
                     <p className="text-2xl font-bold text-primary-600">{service.pricing}</p>
                   </div>
                   <Link href={`/services/${service.slug}`}>
-                    <Button variant="primary">
+                    <Button variant="default">
                       Learn More
                       <svg
                         className="ml-2 h-4 w-4"

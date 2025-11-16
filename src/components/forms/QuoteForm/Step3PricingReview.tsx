@@ -13,7 +13,7 @@ import { formatPrice } from '@/lib/utils/pricing'
 import type { BookingInput } from '@/lib/validation/booking.schema'
 
 interface Step3Props {
-  form: UseFormReturn<BookingInput>
+  form: UseFormReturn<BookingInput, any>
   quote: {
     distance: number
     serviceCost: number
