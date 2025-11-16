@@ -14,7 +14,10 @@
       "Bash(npm uninstall:*)",
       "Bash(git branch:*)",
       "Bash(git remote add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(dir \"c:\\laragon\\www\\Carpet\\.claude\\BMad\" /s)",
+      "Bash(dir:*)",
+      "Bash(npm run prisma:generate:*)"
     ],
     "deny": [],
     "ask": []
