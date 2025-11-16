@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Booking {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Contact Information
+  name            String
+  email           String
+  phone           String
+  address         String
+  postcode        String
+
+  // Service Details
+  serviceType     String
+  propertyType    String
+  propertySize    String?
+  numberOfRooms   Int?
+  squareMeters    Int?
+
+  // Additional Options
+  stainRemoval    Boolean  @default(false)
+  additionalNotes String?
+  photoUrls       String[]
+
+  // Scheduling
+  preferredDate   DateTime
+
+  // Pricing
+  distance        Float
+  travelCost      Float
+  serviceCost     Float
+  totalCost       Float
+
+  // Status
+  status          BookingStatus @default(PENDING)
+
+  @@map("bookings")
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
