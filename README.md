@@ -8,7 +8,7 @@ A modern, Next.js-based web platform for Method Clean - a professional carpet cl
 - **Multi-Step Booking Form**: Optimized UX with high conversion rates
 - **Service Pages**: Dedicated pages for each cleaning service (Carpet, Rug, Upholstery, Leather, Mattress, Stain Removal, Commercial, Car Valeting)
 - **Distance-Based Pricing**: Automatic travel cost calculation for locations within 100 miles of Manchester
-- **Database Storage**: MongoDB integration with Prisma ORM
+- **Database Storage**: Supabase (PostgreSQL) with Prisma ORM
 - **Google Sheets Integration**: Automatic lead export to Google Sheets
 - **Email Notifications**: Automated emails for customers and admin
 - **SEO Optimized**: Server-side rendering, meta tags, and Local Business Schema
@@ -20,7 +20,7 @@ A modern, Next.js-based web platform for Method Clean - a professional carpet cl
 - **Framework**: Next.js 14+ (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Database**: MongoDB with Prisma ORM
+- **Database**: Supabase (PostgreSQL) with Prisma ORM
 - **Form Handling**: React Hook Form + Zod validation
 - **APIs**: Google Maps API, Google Sheets API
 - **Email**: Nodemailer
@@ -54,7 +54,7 @@ carpet-cleaning-service/
 
 - Node.js 18+
 - npm or yarn
-- MongoDB database (local or cloud)
+- Supabase account (free tier available)
 - Google Maps API key
 - Google Sheets API credentials (optional)
 
@@ -65,31 +65,41 @@ carpet-cleaning-service/
    npm install
    ```
 
-2. **Set up environment variables**:
-   Copy `.env.example` to `.env.local` and fill in your values:
+2. **Set up Supabase**:
+   Follow the detailed guide in [SUPABASE_SETUP.md](SUPABASE_SETUP.md) to:
+   - Create a Supabase project
+   - Get your credentials
+   - Initialize the database schema
+
+3. **Set up environment variables**:
+   Copy `.env.example` to `.env.local` and fill in your Supabase credentials:
    ```bash
    cp .env.example .env.local
    ```
 
    Required variables:
-   - `DATABASE_URL`: MongoDB connection string
+   - `DATABASE_URL`: Supabase connection pooling URL
+   - `DIRECT_URL`: Supabase direct connection URL
+   - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anon key
    - `GOOGLE_MAPS_API_KEY`: For distance calculation
-   - `GOOGLE_SHEETS_PRIVATE_KEY`: For Google Sheets integration
-   - `GOOGLE_SHEETS_CLIENT_EMAIL`: Service account email
-   - `GOOGLE_SPREADSHEET_ID`: Target spreadsheet ID
-   - `SMTP_USER` and `SMTP_PASSWORD`: Email credentials
+   - `GOOGLE_SHEETS_PRIVATE_KEY`: For Google Sheets integration (optional)
+   - `GOOGLE_SHEETS_CLIENT_EMAIL`: Service account email (optional)
+   - `GOOGLE_SPREADSHEET_ID`: Target spreadsheet ID (optional)
+   - `SMTP_USER` and `SMTP_PASSWORD`: Email credentials (optional)
 
-3. **Generate Prisma Client**:
+4. **Generate Prisma Client and push schema**:
    ```bash
    npm run prisma:generate
+   npm run prisma:push
    ```
 
-4. **Run the development server**:
+5. **Run the development server**:
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**:
+6. **Open your browser**:
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Available Scripts
@@ -120,13 +130,19 @@ Base prices are configured in `.env.local`:
 
 ## Database Schema
 
-The platform uses MongoDB with the following main model:
+The platform uses Supabase (PostgreSQL) with the following main model:
 
 **Booking**:
-- Contact information (name, email, phone, address)
-- Service details (type, property info, room count)
+- `id` (UUID, primary key)
+- Contact information (name, email, phone, address, postcode)
+- Service details (type, property info, room count, square meters)
+- Additional options (stain removal, notes, photo URLs)
+- Scheduling (preferred date)
 - Pricing breakdown (distance, travel cost, service cost, total)
-- Status tracking (pending, confirmed, completed, cancelled)
+- Status tracking (PENDING, CONFIRMED, COMPLETED, CANCELLED)
+- Timestamps (createdAt, updatedAt)
+
+See [prisma/schema.prisma](prisma/schema.prisma) for the complete schema definition.
 
 ## API Routes
 
@@ -139,21 +155,26 @@ The platform uses MongoDB with the following main model:
 
 ### Prerequisites for Production
 
-1. Set up MongoDB database (MongoDB Atlas recommended)
-2. Configure Google Sheets API service account
+1. Supabase project (production tier recommended for high traffic)
+2. Configure Google Sheets API service account (optional)
 3. Set up email service (Gmail SMTP or other)
 4. Obtain Google Maps API key
 
 ### Deploy to Vercel
+
+Vercel is the recommended platform for Next.js deployment:
 
 ```bash
 npm run build
 ```
 
 Then deploy to Vercel:
-1. Import your Git repository
-2. Add environment variables in Vercel dashboard
+1. Import your Git repository to Vercel
+2. Add all environment variables in Vercel dashboard (from `.env.local`)
 3. Deploy
+4. Vercel will automatically detect Next.js and configure build settings
+
+**Note**: Supabase works seamlessly with Vercel's edge functions and serverless architecture.
 
 ## Google Sheets Integration Setup
 

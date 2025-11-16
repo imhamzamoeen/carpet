@@ -1,0 +1,103 @@
+---
+alwaysApply: true
+---
+
+## ✅ Core Engineering Principles
+
+- Always favor the simplest solution that meets requirements and avoid over‑engineering.
+- Detect duplicate logic and consolidate it before writing new code.
+- Implement the straightforward version first; only optimize after profiling shows a need.
+- Propose small, well‑scoped diffs when evolving a feature instead of large rewrites.
+- Ensure each class or function has a single responsibility and is open for extension but closed for modification.
+- Name variables and functions descriptively, keep methods under ~30 lines, and follow the team’s style guide.
+- Annotate diffs with clear “what” and “why” comments and address feedback constructively.
+- Suggest pairing or documenting assumptions when uncertain, and keep stakeholders informed of changes.
+- Stay aware of new tools and patterns, vet their fit critically, and incorporate feedback on your suggestions.
+
+## 🧪 Testing & Observability
+
+- Generate or recommend unit tests for core logic and integration tests for critical flows.
+- Insert structured logs, metrics, and traces around operations that may fail or become bottlenecks.
+- Allow lower layers to fail fast but catch and recover at boundaries, surfacing clear messages and alerts.
+
+## 🔐 Security & Validation
+
+- Always validate and sanitize inputs, manage secrets securely, and flag vulnerable dependencies.
+- Serve your entire site over HTTPS to secure data in transit and boost search‑engine trust.
+
+---
+
+## 🧱 UI Component Architecture
+
+- Prioritize reusable **atomic components** (atoms, molecules, organisms, layouts).
+- Centralize all **design tokens** in `tailwind.config.js` (colors, spacing, typography).
+- Use a global `<Layout>` with consistent spacing/grid and slots for header/footer/sidebar.
+- Keep UI, logic, and styling **co-located** in folders by feature or page.
+- Design all components to be configurable via **props**, not hardcoded.
+- Follow consistent naming and structure:  
+  - `PascalCase.tsx` for components  
+  - `kebab-case` for folders  
+  - Limit folder size (~7 items max)
+
+## ⚙️ Logic, Hooks, and State
+
+- Move **business logic to hooks** (e.g., `/hooks/useCheckout.ts`).
+- Keep UI components dumb—pass data in, react to user actions.
+- Type everything strictly—avoid `any`, prefer `unknown` + schema parsing (Zod/Yup).
+- Modularize files—avoid bloated logic or overly large components.
+- Avoid prop drilling—use context or lightweight state libraries like Zustand when needed.
+- Separate **data-fetching from rendering** using `lib/api/` or `lib/fetchers/`.
+
+---
+
+## 🧑‍💻 Development Workflow
+
+- Lint, format, and test all commits before merge.
+- Remove all `console.log` calls before pushing production code.
+- Use Prettier + ESLint + Vitest or Jest for static checks and testing.
+
+---
+
+## ♿ Accessibility & Internationalization
+
+- Build accessibility from the start: semantic HTML, ARIA roles, keyboard support, focus management.
+- Externalize all user-facing strings to allow easy localization.
+- Use alt text on all images, label form inputs properly, and follow a11y color contrast rules.
+
+---
+
+## 🌐 SEO & Web Best Practices
+
+- Use semantic tags (`<h1>`–`<h6>`) and a clear heading hierarchy.
+- Write descriptive, keyword-rich `<title>` and `<meta>` tags for every page.
+- Keep URLs clean, human-readable, and keyword-focused.
+- Optimize assets:
+  - Minify and bundle CSS/JS
+  - Lazy-load media and components
+  - Compress images
+  - Use browser caching
+- Implement structured data (`schema.org`) for rich snippets.
+- Use canonical tags to avoid duplicate content issues.
+- Maintain XML sitemaps and robots.txt, and verify with Google Search Console.
+- Include Open Graph and Twitter Card metadata for better social previews.
+- For international sites, use `hreflang` tags appropriately.
+- Handle pagination SEO properly using `rel="next"` / `rel="prev"`.
+
+---
+
+## 🔁 Performance & Maintenance
+
+- Set performance budgets for components (e.g. bundle size, render time).
+- Use lazy loading, dynamic imports, and code splitting where possible.
+- Prefer memoization (`useMemo`, `React.memo`) for expensive renders.
+- Use consistent error-handling patterns with fallback UIs and retry logic.
+- Keep components **decoupled and composable** across modules or pages.
+
+---
+
+## 📖 Documentation Standards
+
+- Document every component’s API: props, events, slots.
+- Use Storybook or MDX examples for visual documentation.
+- Update high-level `README.md` when major modules or flows change.
+- Use inline comments **only** when logic is not self-explanatory.

@@ -1,0 +1,72 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+⚡ Core Next.js Performance
+Prioritize Rendering Strategy: Analyze data freshness and SEO needs to choose the optimal strategy for each page/component: SSG (Static Site Generation) for static content, ISR (Incremental Static Regeneration) for content that updates occasionally (e-commerce product pages, blogs), and SSR (Server-Side Rendering) only when data must be real-time (user dashboards).
+
+Optimize Initial Load: Use next/dynamic to implement code splitting and lazy-load non-critical components or heavy libraries only when they are needed.
+
+Isolate Logic from UI: Move all complex logic and data fetching out of components and into custom React Hooks to prevent unnecessary re-renders during state changes.
+
+Parallelize Data Fetching: When using SSR, fetch independent data in parallel using Promise.all() within getServerSideProps to reduce server-wait time.
+
+Minimize Hydration Cost: Reduce the complexity of components rendered on the initial load to decrease the time needed for the client to "re-hydrate" the application.
+
+🖼️ Media & Asset Optimization
+Adopt next/image: Use the next/image component for all images to automatically:
+
+Serve images in modern formats (e.g., WebP).
+
+Implement native lazy loading.
+
+Prevent Cumulative Layout Shift (CLS) by automatically reserving space.
+
+Set the priority prop to true for all images in the initial viewport.
+
+Optimize Fonts: Use the next/font feature to automatically manage and self-host font files, removing external network requests and ensuring fonts are served efficiently to eliminate CLS and FOUT (Flash of Unstyled Text).
+
+Compress & Scale: Configure an image optimization service or loader to serve appropriately sized images based on the user's viewport, avoiding serving desktop-sized images to mobile devices.
+
+🧩 Bundle & Code Health
+Analyze Bundle Bloat: Install and use the @next/bundle-analyzer to visualize the size of modules and identify large, unnecessary dependencies to be removed or dynamically imported.
+
+Implement Tree-Shaking: Ensure proper use of named imports from libraries that support tree-shaking to only include the code that is actually used.
+
+Client-Side Data Fetching: For data that is not critical for the initial render or SEO, use client-side fetching with libraries like SWR or React Query after the page has hydrated.
+
+Type Safety: Maintain strict TypeScript typing and avoid any to prevent runtime errors and ensure props and state are predictable.
+
+⚙️ Third-Party Scripts & Observability
+Manage External Scripts: Use the official next/script component to load third-party scripts (e.g., Google Analytics, Tag Manager, advertising) and strategically set the strategy prop:
+
+beforeInteractive: For critical scripts that must run before hydration (e.g., cookie consent).
+
+afterInteractive: For most standard analytics/tracking.
+
+lazyOnload: For non-critical scripts that can wait until the browser is idle.
+
+Leverage @next/third-parties: Use this official package for highly-optimized integrations with common services like Google Analytics and Google Maps.
+
+Structured Logging: Integrate a monitoring service (Sentry, Datadog) and use structured logs and traces to track requests, component render times, and cache hits/misses in production.
+
+Set Performance Budgets: Define clear budgets for metrics like First Contentful Paint (FCP) and Largest Contentful Paint (LCP), and use Web Vitals reports to proactively monitor regressions.
+
+🏛️ UI Component Architecture
+Feature-Based Folder Structure: Organize components and related logic into folders based on features or routes (e.g., /app/checkout/, /components/layout/).
+
+Co-locate Logic: Keep components, their custom hooks, and types/schemas together in the same feature folder.
+
+Prop Drilling Solution: Use lightweight state management libraries like Zustand or Recoil for global state to avoid "prop drilling" components through many levels.
+
+Dumb Components: Ensure UI components remain "dumb," receiving all data via props and emitting actions/events up via callback props.
+
+🌐 SEO & Web Best Practices
+Metadata Management: Use the built-in Metadata API in the App Router to define static and dynamic title, description, opengraph tags, and canonical URLs.
+
+Sitemaps & Robots: Ensure an accurate, dynamically generated sitemap.xml and robots.txt are provided in the /app or /public folder.
+
+Hreflang for i18n: Implement hreflang tags in the metadata configuration for international sites to properly signal language and regional targeting to search engines.
+
+Semantic HTML: Continue to build the foundational structure with correct semantic HTML (<main>, <nav>, <h1> hierarchy) to aid accessibility and SEO.

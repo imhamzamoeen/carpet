@@ -1,0 +1,311 @@
+---
+description: Whenever the agent need to make a frontend , it should look this file to see which component i should pick from internet
+alwaysApply: false
+---
+## 1) Header / Navigation
+
+- **Navbar / Mega-menu** — *Aceternity UI*  
+  [Navbar Menu](https://ui.aceternity.com/components/navbar-menu)  
+  Responsive nav bar with mega-dropdown, animated hover effects, and micro-interactions. Works well with background beams and gradients for striking hero headers.
+
+- **Floating Navbar & Dock** — *Aceternity UI*  
+  [Floating Navbar](https://ui.aceternity.com/components/floating-navbar), [Floating Dock](https://ui.aceternity.com/components/floating-dock)  
+  macOS-style floating dock; icons enlarge on hover, delivering a polished, familiar feel.
+
+- **Resizable Navbar** — *Aceternity UI*  
+  [Resizable Navbar](https://ui.aceternity.com/components/resizable-navbar)  
+  Shrinks or expands on scroll with smooth micro-animations.
+
+- **Sidebar / Drawer** — *MUI*  
+  [Drawer](https://mui.com/material-ui/react-drawer/)  
+  Ergonomic side navigation; can be permanent or toggled by menu icon.
+
+- **Bottom Navigation & Pill Nav** — *MUI / React Bits*  
+  [Bottom Navigation](https://mui.com/material-ui/react-bottom-navigation/), [Pill Nav](https://reactbits.dev)  
+  MUI anchors destinations at the bottom; React Bits’ pill nav has a playful 3-D pill style with animated indicator.
+
+- **Tabs** — *MUI / Aceternity UI / Radix Themes*  
+  [Tabs (MUI)](https://mui.com/material-ui/react-tabs/), [Tabs (Aceternity)](https://ui.aceternity.com/components/tabs), [Tabs (Radix)](https://www.radix-ui.com/themes/docs/components/tabs)  
+  Accessible tabbed navigation across all libraries. Radix adds keyboard navigation and theming.
+
+- **Context / Dropdown Menu** — *Radix Themes / MUI / Aceternity UI*  
+  [Dropdown Menu](https://www.radix-ui.com/themes/docs/components/dropdown-menu), [Context Menu](https://www.radix-ui.com/themes/docs/components/context-menu), [Menu (MUI)](https://mui.com/material-ui/react-menu/)  
+  Menus with keyboard navigation, submenus, and accessible focus management.
+
+- **Breadcrumbs** — *MUI*  
+  [Breadcrumbs](https://mui.com/material-ui/react-breadcrumbs/)  
+  Shows current page location within hierarchy and enables upward navigation.
+
+---
+
+## 2) Orientation & Secondary Navigation
+
+- **Speed Dial / FAB** — *MUI*  
+  [Speed Dial](https://mui.com/material-ui/react-speed-dial/)  
+  Floating Action Button reveals secondary actions; expands with Material-style animation.
+
+- **Stepper** — *MUI*  
+  [Stepper](https://mui.com/material-ui/react-stepper/)  
+  Organizes multi-step processes (forms, checkouts). Optional icons and connectors add clarity.
+
+---
+
+## 3) Hero & Top Sections
+
+- **Hero Sections (Layouts Collection)** — *Aceternity UI*  
+  [Hero Sections](https://ui.aceternity.com/components/hero-sections)  
+  Templates from minimal to complex with gradients, 3-D shapes, and micro-animations.
+
+- **Background Effects** — *Aceternity UI*  
+  [Backgrounds & Effects](https://ui.aceternity.com/components/backgrounds)  
+  Includes gradients, beams, aurora, ripples, and wavy animations.
+
+- **Hero Parallax & Sticky Scroll Reveal** — *Aceternity UI*  
+  [Parallax Scroll](https://ui.aceternity.com/components/parallax-scroll), [Sticky Scroll Reveal](https://ui.aceternity.com/components/sticky-scroll-reveal)  
+  Creates parallax 3-D hero animations and sticky content reveals.
+
+- **Radix Section** — *Radix Themes*  
+  [Section](https://www.radix-ui.com/themes/docs/components/section)  
+  Semantic container for page sections; pairs with Radix Grid, Container, and Box.
+
+- **React Bits Backgrounds** — *React Bits*  
+  Examples: Liquid Ether, Aurora, Plasma, Particles, Pixel Blast, Light Rays  
+  Highly animated backgrounds with fluid morphing, particles, or cosmic textures.
+
+---
+
+## 4) Feature / Highlights
+
+- **Feature Sections (Bento & Simple)** — *Aceternity UI*  
+  [Feature Sections](https://ui.aceternity.com/components/feature-sections)  
+  Pre-built grids (bento layouts, alternating text/image sections).
+
+- **Cards Sections** — *Aceternity UI*  
+  [Cards Sections](https://ui.aceternity.com/components/cards-sections)  
+  Responsive card grids with animated backgrounds.
+
+- **Callout / Badge / Avatar** — *Radix Themes*  
+  [Callout](https://www.radix-ui.com/themes/docs/components/callout), [Badge](https://www.radix-ui.com/themes/docs/components/badge), [Avatar](https://www.radix-ui.com/themes/docs/components/avatar)  
+  Emphasize messages, show statuses, or display user profiles.
+
+- **Cards (3-D / Hover / Stacks)** — *Aceternity UI*  
+  [3D Card Effect](https://ui.aceternity.com/components/3d-card), [Card Stack](https://ui.aceternity.com/components/card-stack), [Evervault Card](https://ui.aceternity.com/components/evervault-card), etc.  
+  Modern interactive card effects (tilt, glare, stack, infinite scroll).
+
+- **Card Highlights & Tabular Data** — *MUI*  
+  [Card](https://mui.com/material-ui/react-card/), [Data Grid](https://mui.com/x/react-data-grid/)  
+  Standard card grouping + advanced tabular data with sorting/filtering.
+
+- **Lists** — *MUI*  
+  [List](https://mui.com/material-ui/react-list/)  
+  Vertical item indices with icons, dividers, and rich layouts.
+
+- **Timeline** — *Aceternity UI / MUI Lab*  
+  [Timeline (Aceternity)](https://ui.aceternity.com/components/timeline), [Timeline (MUI Lab)](https://mui.com/material-ui/react-timeline/)  
+  Chronological views; Aceternity includes animated scroll reveal.
+
+- **Compare / Code Block** — *Aceternity UI*  
+  [Compare](https://ui.aceternity.com/components/compare), [Code Block](https://ui.aceternity.com/components/code-block)  
+  Image comparison slider + responsive syntax-highlighted code blocks.
+
+- **Data List / Table / Spinner / Skeleton** — *Radix Themes*  
+  Accessible loading and data display primitives.
+
+---
+
+## 5) Media & Sliders
+
+- **Carousel / Image Slider** — *Aceternity UI*  
+  [Carousel](https://ui.aceternity.com/components/carousel), [Apple Cards Carousel](https://ui.aceternity.com/components/apple-cards-carousel)  
+  Micro-interactions with parallax tilt and Apple-style animations.
+
+- **Testimonials** — *Aceternity UI*  
+  [Testimonials](https://ui.aceternity.com/components/testimonials)  
+  Animated stacks and cards for user quotes.
+
+- **Gallery & Infinite Scroll** — *React Bits*  
+  Circular, dome, rolling, and infinite galleries for portfolios.
+
+- **Masonry / Image List** — *MUI Lab*  
+  [Masonry](https://mui.com/material-ui/react-masonry/), [Image List](https://mui.com/material-ui/react-image-list/)  
+  Pinterest-style or grid image displays.
+
+- **Video / Model Viewer** — *React Bits*  
+  3-D interactive product presentations.
+
+---
+
+## 6) Social Proof
+
+- **Animated Testimonials** — *Aceternity UI*  
+  Card stack and animated testimonial cycles.
+
+- **Avatar Groups / Badge** — *MUI*  
+  Grouped avatars and status badges.
+
+- **Profile Card / Lanyard** — *React Bits*  
+  Stylish animated user cards with ribbons.
+
+---
+
+## 7) Pricing & Plans
+
+- **Pricing Sections** — *Radix Themes / Aceternity UI*  
+  Radix layout primitives + Aceternity 3-D card effects for plans.
+
+- **Plan Selection** — *MUI*  
+  Radios, toggles, and segmented controls.
+
+---
+
+## 8) FAQ / Info Reveal
+
+- **Accordion** — *MUI*  
+  Expandable/collapsible content panels.
+
+- **Disclosure / Hover Card / Popover** — *Radix Themes*  
+  Accessible overlays for previews and details.
+
+- **Animated Tooltip & Link Preview** — *Aceternity UI*  
+  Tooltip follows cursor; link previews show on hover.
+
+---
+
+## 9) Tabbed Content & Containers
+
+- **Tabs & Tab Nav** — *MUI / Radix / Aceternity*  
+  Multi-panel navigation; Aceternity adds animations.
+
+- **Scroll Area** — *Radix Themes*  
+  Custom scrollbars and scrollable containers.
+
+---
+
+## 10) Calls to Action (CTA)
+
+- **Buttons** — *MUI*  
+  Standard action buttons.
+
+- **Radix Buttons / Icon Buttons**  
+  Theme-aware with ghost, solid, outline variants.
+
+- **Stateful Button** — *Aceternity UI*  
+  Shows loading/success states.
+
+- **Hero CTA Composition**  
+  Combine Aceternity hero layouts + Radix/MUI buttons.
+
+---
+
+## 11) Forms & Inputs
+
+- **File Upload** — *Aceternity UI*  
+  Drag-and-drop file upload with grid background.
+
+- **Signup Form / Vanish Input** — *Aceternity UI*  
+  Animated placeholder form inputs.
+
+- **Text Fields & Controls** — *MUI*  
+  Full Material Design input suite (text, selects, date, time, sliders).
+
+- **Forms & Inputs** — *Radix Themes*  
+  Unstyled but accessible and theme-aware primitives.
+
+- **Fancy Inputs & Pickers** — *React Bits*  
+  Animated cursors, count-up numbers, and scroll reveals.
+
+---
+
+## 12) Menus & Overlays
+
+- **Dialog / Modal** — *MUI / Radix / Aceternity UI*  
+  Accessible dialogs; Aceternity adds animated transitions.
+
+- **Tooltip** — *MUI / Radix / Aceternity*  
+  Informative text bubbles; animated versions follow cursor.
+
+- **Popover / Hover Card** — *Radix Themes*  
+  Interactive overlays for sign-ins or previews.
+
+- **Snackbar / Toast** — *MUI / Radix / Aceternity*  
+  Notifications and animated toasts.
+
+- **Hover Effects & Magnetic Menus** — *React Bits*  
+  Particle trails, magnetic icons, glitch effects.
+
+---
+
+## 13) Pagination & Navigation Aids
+
+- **Pagination** — *MUI*  
+  Page navigation controls.
+
+- **Breadcrumbs** — *MUI*  
+  Trace site hierarchy.
+
+- **Stepper / Progress / Progress Bar** — *MUI / Radix*  
+  Show task or form progress.
+
+- **Scroll Indicator / Infinite Scroll** — *React Bits*  
+  Dynamic scroll experiences.
+
+---
+
+## 14) Layout Primitives & Utilities
+
+- **Section / Container / Grid / Flex / Box** — *Radix Themes*  
+  Fundamental building blocks for layouts.
+
+- **Theme** — *Radix Themes*  
+  Configure light/dark, accent colors, radius.
+
+- **MUI Layout** — *MUI*  
+  Box, Container, Grid, Stack.
+
+- **MUI System & Utils** — *MUI*  
+  Utilities: Popper, Portal, Transitions, Media Query.
+
+- **Radix Utilities** — *Radix Themes*  
+  Portal, Slot, Reset, Icons, Theme Panel.
+
+- **React Bits Layout** — *React Bits*  
+  Magic Bento, Glass Surfaces, Galleries, Infinite Menus.
+
+---
+
+## 15) Footer
+
+- **Footer Composition** — *Radix / MUI*  
+  Use Section + Grid + List/Divider to build footers.
+
+- **Contact & Social Links**  
+  Aceternity cards/buttons/icons or React Bits hover effects.
+
+---
+
+## 16) Search
+
+- **Autocomplete & Search Field** — *MUI / Radix*  
+  Suggest results as you type.
+
+- **Search Menu Results**  
+  Combine autocomplete with Radix ComboBox.
+
+- **Animated Search Effects** — *React Bits*  
+  Text animations like typewriter, shuffle, decrypted.
+
+---
+
+## 17) Bonus “Wow” Effects — *React Bits*
+
+- **Text Animations**  
+  Split, scramble, reveal, glitch, scroll animations.
+
+- **Animations & Hover Effects**  
+  Borders, pixel transitions, sparks, particles.
+
+- **Interactive Components**  
+  Card Navs, 3-D menus, glass surfaces, gooey sliders.
+
+- **Backgrounds & Effects**  
+  Aurora, Galaxy, Plasma, Particle fields, Fluid chrome, Beams.

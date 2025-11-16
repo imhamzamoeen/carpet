@@ -1,0 +1,172 @@
+---
+alwaysApply: false
+---
+
+✅ Expert-Level On-Page SEO Checklist
+being an expert seo master, please follow all the parts while developing a feature 
+
+Part 1: Strategic & Foundational Blueprint
+
+1.1 Align with User Intent & Semantic SEO
+
+Target informational + transactional intent: “Do I qualify for a free boiler upgrade?”, “How to apply for ECO4”, “ECO4 eligibility checker UK”.
+
+Build keyword clusters: primary (“free boiler upgrade UK”, “ECO4 boiler grant”) + related (“boiler replacement scheme”, “Ofgem ECO4 criteria”, “ECO4 vs ECO5 changes”).
+
+Benchmark SERPs & identify information gain: competitors often have thin FAQs → create deeper step-by-step guides, timelines, and eligibility calculators.
+
+Ensure people-first content: add original data (approval rates, timelines, postcode coverage heatmaps).
+
+1.2 Demonstrate E-E-A-T
+
+Add author bio (“Energy Grants Specialist”), company credentials, and case studies/testimonials.
+
+Build About, Contact, Editorial Policy pages for trust signals.
+
+Link to authoritative sources: Ofgem, GOV.UK, council websites.
+
+Implement Author + Organization Schema.
+
+Add “Last Updated” date (critical: LLMs and Google’s AI Overviews reward freshness).
+
+Part 2: Core Technical Implementation
+
+2.1 URL & Site Structure
+
+Create clean URLs:
+
+/eco4/eligibility-checker
+
+/eco4/how-to-apply
+
+/eco4/documents
+
+/eco4/updates (changelog).
+
+Use HTTPS only, redirect non-preferred versions.
+
+Add breadcrumb schema.
+
+2.2 Crawlability & Indexability
+
+In robots.txt, allow Bingbot + GPTBot (for Copilot + GPT discovery).
+
+Add to XML sitemap + IndexNow for instant Bing push.
+
+Validate in GSC + Bing Webmaster Tools.
+
+2.3 Canonicalization & Duplicate Content
+
+Use canonical tags (point to self).
+
+Manage UTM/params.
+
+Add hreflang if multi-region (UK vs. other).
+
+2.4 Internal Linking
+
+Each key page (Eligibility / HowTo / Updates) should get 3+ contextual links.
+
+Use descriptive anchors (“check ECO4 eligibility”, “apply for free boiler grant”).
+
+Avoid orphan pages.
+
+Part 3: On-Page Content & Elements
+
+3.1 Title & Meta Description
+
+Titles:
+
+“Free Boiler Upgrade UK (2025) – Check ECO4 Eligibility in 60 Seconds”
+
+Keep <60 chars, keyword front-loaded.
+
+Meta descriptions: compelling, <155 chars, with CTA:
+
+“Check if you qualify for a free ECO4 boiler upgrade. Quick eligibility tool, updated October 2025.”
+
+3.2 Heading Structure
+
+H1: “Free Boiler Upgrade UK (ECO4 Scheme 2025)”
+
+H2s: “Who Qualifies”, “How to Apply”, “Required Documents”, “ECO4 vs ECO5 Updates”.
+
+3.3 Visual & Media Optimization
+
+Use WebP images (clean infographic: eligibility steps).
+
+Alt text with keywords (“ECO4 boiler upgrade eligibility checker screenshot”).
+
+If using video (explainer), add VideoObject schema.
+
+3.4 Readability & Formatting
+
+Start with 2–3 sentence TL;DR per page (LLMs quote this first).
+
+Short paras, bullet lists, bold takeaways.
+
+Add FAQ section (FAQPage schema).
+
+Part 4: Page Experience & Performance
+
+4.1 Core Web Vitals
+
+LCP: preload hero assets (form/CTA visible in <2.5s).
+
+INP: minimize JS (especially eligibility checker).
+
+CLS: reserve space for banners/forms.
+
+4.2 UX & Accessibility
+
+Mobile-first, ARIA roles, high contrast.
+
+Table of contents with jump links → LLMs & users can navigate sections quickly.
+
+4.3 Security & Trust Signals
+
+HTTPS only.
+
+Trust badges (Gas Safe, PAS2035, Ofgem).
+
+Reviews/testimonials on LocalBusiness schema.
+
+Part 5: Structured Data for Enhanced Visibility
+
+5.1 Schema Strategy
+
+Use JSON-LD only.
+
+Core types:
+
+Organization (with logo + contact info).
+
+FAQPage (eligibility, application timelines).
+
+HowTo (application steps).
+
+LocalBusiness (if regional).
+
+BreadcrumbList.
+
+5.2 AI & SERP Optimization
+
+Explicitly map entities to Knowledge Graph: “ECO4 scheme” → Ofgem entity, “Free boiler upgrade UK” → grant programs.
+
+Optimize FAQs for AI Overviews (short, declarative answers).
+
+Add “speakable” schema for voice queries (“How do I apply for ECO4?”).
+
+Interlink eligibility, how-to, and updates pages → topical authority.
+
+Part 6: Engagement & Long-Term SEO
+
+6.1 User Engagement
+
+Strong above-the-fold CTA: “Check Eligibility in 60 Seconds (Free)”.
+
+Add related articles widget (“ECO4 vs ECO5”, “Boiler Grants in Scotland”).
+
+Interactive tools (eligibility calculator, postcode checker) = higher engagement → AI finds them cite-worthy.
+
+Blog “Updates” section refreshed monthly → freshness keeps you in Copilot’s index.

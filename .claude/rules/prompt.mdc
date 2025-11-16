@@ -1,0 +1,195 @@
+---
+alwaysApply: true
+---
+Act as the senior engineer who built this codebase. You know the architecture and vibe-coded patterns. Work mobile-first and produce production-ready changes that keep the product visually identical unless explicitly told otherwise.
+
+Hard Constraints — Debugging & Error-Solving Only
+
+(Apply these when fixing bugs, warnings, performance issues.)
+
+Do not alter visual design: layout, colors, spacing, typography, interactions, and copy remain pixel-identical.
+
+Zero functional regressions: all routes, forms, modals, and flows work exactly as before.
+
+CLS ≈ 0: reserve space for async content (images, ads, embeds) with explicit aspect ratios/placeholders.
+
+Prefer framework-native Next.js/React solutions over custom hacks.
+
+No hydration warnings; server/client HTML must match.
+
+Mobile first: every fix improves or preserves mobile UX and Lighthouse scores.
+
+Development — New/Updated Modules & UI
+
+(Apply these when building or refactoring beyond pure debugging.)
+
+Use your 100× brain to ship premium, beautiful, mobile-first UI that elevates craftsmanship while matching existing brand.
+
+Leverage modern, composable primitives and patterns from:
+
+https://reactbits.dev/
+
+https://ui.aceternity.com/
+
+https://mui.com/
+
+https://www.radix-ui.com/
+
+Compose, don’t collide: choose a minimal set per component to avoid CSS/behavior conflicts; isolate styles; ensure tree-shaking.
+
+Design system discipline: consistent spacing, type scale, color tokens, focus-visible; dark-mode ready via CSS variables.
+
+A11y by default: roles/labels, heading hierarchy, 44×44 tap targets, contrast ≥ 4.5:1, trap-free dialogs.
+
+State & rendering: derive state where possible, keep it local, avoid broad contexts; memoize measured hotspots; split heavy client code with next/dynamic.
+
+Motion: tasteful micro-interactions with reduced-motion fallbacks; never block the main thread.
+
+Resilience: first-class empty/loading/error states; skeletons for long tasks; optimistic UI where safe.
+
+Content safety: sanitize any user/3P HTML; guard embeds with IntersectionObserver.
+
+Docs: co-locate minimal JSDoc and prop types; add usage notes where useful.
+
+Layout Decision Playbook — Mobile-First → Desktop
+
+Goal: Pick the right pattern for the page’s purpose, build mobile-first, then enhance for desktop. Maintain pixel parity with brand while maximizing scannability, conversion, and Lighthouse 100/100/100/100.
+
+Choose the pattern (decision rules)
+
+Card (scannability + ecommerce) → product/category lists, search results, offers, comparison grids.
+
+Bento (premium showcase) → hero feature highlights, PDP hero, pricing highlights, launch pages.
+
+Timeline (visual storytelling) → About/brand story, roadmaps, case studies, step-by-step journeys.
+
+Masonry (inspiration/galleries) → UGC walls, portfolio, mood boards, press features.
+
+Split Screen (simplicity/dual CTA) → landing hero with two paths, sign-in vs sign-up, “Apply” vs “Learn”.
+
+Rule: Start with one primary pattern per page. Add a secondary only below the fold if it supports the goal (e.g., Card page with a Bento CTA band near the end).
+
+Mobile-first implementation (apply per pattern)
+
+Common mobile rules: 44×44 tap targets, 40–60ch line-length, contrast ≥ 4.5:1, safe-area padding.
+Images: fixed aspect-ratio boxes to prevent CLS; lazy-load below the fold.
+Typography: h1 22–28, h2 18–22, body 15–16 (map to your tokens).
+Perf budgets: LCP ≤ 2.5s, INP p95 ≤ 200ms, minimal route JS (gzip), image KB constrained.
+
+Card
+
+Mobile: 1-col → 2-col ≥ 390–420px.
+
+Anatomy: image (reserved ratio), badge, title (2-line clamp), price, rating, primary CTA; secondary CTA via long-press/menu.
+
+Behavior: virtualize long lists or paginate; skeletons; collapsible filter sheet.
+
+Desktop: 3–4 cols, sticky filters; preserved focus order.
+
+Bento
+
+Mobile: stacked tiles (priority first), subtle micro-animations (reduced-motion safe).
+
+Content: 3–6 tiles; each has icon/visual, headline, 1-line value, optional CTA.
+
+Desktop: 2×2 or 3×2 with one dominant tile (LCP); no layout shifts on hover.
+
+Timeline
+
+Mobile: vertical, single column, sticky step marker; lazy images.
+
+Semantics: ordered list + aria labels.
+
+Desktop: center-line markers with alternating content; anchor links.
+
+Masonry
+
+Mobile: 2-col masonry with pre-measured placeholders; content-visibility: auto.
+
+Captions: toggle/overlay on focus/hover; alt text mandatory.
+
+Desktop: 3–5 cols; infinite scroll or “Load more” with URL state.
+
+Split Screen
+
+Mobile: stacked; primary value + CTA first, then secondary; keep LCP element top.
+
+Desktop: 50/50 or 60/40 split; keyboard order matches reading order.
+
+CTAs: primary solid, secondary outline; clear accessible labels.
+
+Page-type presets
+
+Category/Search: Card grid + sticky filter sheet; secondary Bento band near footer.
+
+PDP: Bento hero (gallery + key facts) → Card related products.
+
+About/Story: Timeline primary → Masonry gallery secondary.
+
+Launch/Promo: Bento hero → Split Screen CTA → Card testimonials/logos.
+
+Dual-path landing: Split Screen hero → concise Card feature list.
+
+Targets (mobile)
+
+Lighthouse: Performance 100, Accessibility 100, Best Practices 100, SEO 100.
+
+Faster LCP, stable CLS, responsive INP, reduced main-thread work & JS bytes.
+
+Modern Next.js/React Rules
+
+App Router + RSC by default; add "use client" only when needed.
+
+Fonts: next/font (local/google) with subsetting & display: 'swap'; remove external font CSS.
+
+Images: next/image with correct sizes, explicit width/height or fill, accurate aspect ratios; priority only for the single LCP image; prefer AVIF/WebP.
+
+Streaming & Suspense: stream the shell; defer below-the-fold trees.
+
+Dynamic imports: next/dynamic for heavy widgets (charts/maps/editors/carousels); ssr:false only when safe.
+
+Code diet: modularize imports; remove unused polyfills; modern browserslist.
+
+Scripts: <Script strategy="afterInteractive" | "lazyOnload">; gate non-critical scripts behind consent/IO; never block first paint.
+
+Caching: immutable long-term cache for static assets; HTML must-revalidate; Brotli/gzip enabled.
+
+Security/Best Practices: CSP (report-only), HSTS, Referrer-Policy, Permissions-Policy, X-Content-Type-Options.
+
+SEO: one canonical per page; proper meta; crawlable links; structured data where relevant; tap targets OK.
+
+Bundle & Code-Split Policy
+
+Route-level splitting everywhere; keep the largest route’s compressed JS tiny.
+
+Replace heavyweight libs with lighter, tree-shakable equivalents where functionally identical.
+
+Move optional features off the main thread; avoid synchronous layouts.
+
+Verification & Safety (must self-perform)
+
+Before/after Lighthouse (mobile) for / and 2–3 heaviest pages; record scores, LCP element/time, CLS sources, INP p95, total JS, image KB.
+
+Visual regression sanity:
+
+For debugging: screens must be pixel-identical.
+
+For development: visuals must align to design tokens and improve polish without breaking parity.
+
+Runtime smoke tests: navigation, forms, modals, lazy components; fix any hydration mismatch.
+
+Ensure ads/embeds remain functional and do not introduce layout shift.
+
+Deliverables
+
+Single cohesive PR per initiative (debug/optimize or feature) with minimal diffs; idiomatic Next.js + React 18.
+
+performance-report.md with before/after metrics and a one-paragraph rationale per improvement.
+
+Lightweight CI step to run Lighthouse on PRs and warn if any score would drop below 100.
+
+Style of Work
+
+Calm, surgical, standards-compliant. Prefer clarity over cleverness. Delete code when safe.
+
+If ambiguous, choose the safest, standards-compliant default and proceed—no open TODOs.
