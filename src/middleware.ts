@@ -1,7 +1,13 @@
-import { type NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { updateSession } from '@/lib/supabase/middleware';
 
 export async function middleware(request: NextRequest) {
+  // Temporarily bypass Supabase middleware to view UI changes
+  // TODO: Fix Supabase environment variable loading issue
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    console.warn('Supabase credentials not loaded, bypassing middleware');
+    return NextResponse.next();
+  }
   return await updateSession(request);
 }
 

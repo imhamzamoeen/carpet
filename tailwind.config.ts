@@ -9,30 +9,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Dark Neomorphic Color System
+        // Clean Professional Light Theme
         background: {
-          primary: '#0C0C0C',
-          secondary: '#121212',
+          primary: '#FFFFFF',
+          secondary: '#F8F9FA',
+          section: '#F5F7FA',
         },
         surface: {
-          card: '#1A1A1A',
-          glass: 'rgba(255, 255, 255, 0.08)',
+          card: '#FFFFFF',
+          light: '#FAFBFC',
         },
         text: {
-          primary: '#FFFFFF',
-          secondary: '#C5C5C5',
-          accent: '#FF9C90',
-          label: '#AAAAAA',
+          primary: '#1F2937',
+          secondary: '#6B7280',
+          accent: '#2563EB',
+          light: '#9CA3AF',
+        },
+        primary: {
+          50: '#EFF6FF',
+          100: '#DBEAFE',
+          200: '#BFDBFE',
+          300: '#93C5FD',
+          400: '#60A5FA',
+          500: '#3B82F6',
+          600: '#2563EB',
+          700: '#1D4ED8',
+          800: '#1E40AF',
+          900: '#1E3A8A',
         },
         accent: {
-          yellow: '#FFCC48',
-          coral: '#FF9C90',
-          pink: '#FF788C',
-          purple: 'rgba(200, 80, 255, 0.25)',
-        },
-        glow: {
-          card: 'rgba(255, 120, 140, 0.35)',
-          soft: 'rgba(255, 140, 120, 0.25)',
+          yellow: '#FBBF24',
+          green: '#10B981',
+          blue: '#2563EB',
         },
       },
       fontFamily: {
@@ -48,49 +56,37 @@ const config: Config = {
         'label': ['14px', { lineHeight: '140%' }],
       },
       borderRadius: {
-        '2xl': '1.5rem',
-        '3xl': '2rem',
+        'card': '18px',
+        'button': '12px',
+        'image': '14px',
         'pill': '9999px',
       },
       boxShadow: {
-        'glow': '0 0 40px rgba(255, 120, 140, 0.35)',
-        'glow-soft': '0 0 60px rgba(255, 140, 120, 0.25)',
-        'glow-accent': '0 0 50px rgba(255, 204, 72, 0.4)',
-        'neomorphic': '20px 20px 60px rgba(0, 0, 0, 0.5), -20px -20px 60px rgba(255, 255, 255, 0.05)',
-      },
-      backgroundImage: {
-        'gradient-radial-coral': 'radial-gradient(circle, rgba(255,140,120,0.25), transparent)',
-        'gradient-radial-purple': 'radial-gradient(circle, rgba(200,80,255,0.25), transparent)',
-        'gradient-mesh': 'radial-gradient(at 20% 30%, rgba(255,140,120,0.25) 0px, transparent 50%), radial-gradient(at 80% 70%, rgba(200,80,255,0.25) 0px, transparent 50%)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'soft': '0 2px 8px rgba(0, 0, 0, 0.08)',
       },
       animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
         'float': 'float 6s ease-in-out infinite',
-        'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
-        'fade-in': 'fade-in 0.6s ease-out',
-        'slide-up': 'slide-up 0.6s ease-out',
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'glow-pulse': {
-          '0%, 100%': { boxShadow: '0 0 40px rgba(255, 120, 140, 0.35)' },
-          '50%': { boxShadow: '0 0 60px rgba(255, 120, 140, 0.55)' },
-        },
-        'fade-in': {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        'slide-up': {
-          '0%': { transform: 'translateY(30px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '50%': { transform: 'translateY(-10px)' },
         },
       },
       spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
-        '100': '25rem',
+        'section': '80px',
       },
     },
   },

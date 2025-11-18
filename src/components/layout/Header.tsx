@@ -32,16 +32,16 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-      {/* Glassmorphic Navbar - Dark Neomorphic Style */}
-      <div className="glass-surface border-b border-white/10 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      {/* Clean Professional Navbar */}
+      <div className="border-b border-gray-200">
         <nav className="container-custom" aria-label="Top">
-          <div className="flex h-[70px] items-center justify-between">
+          <div className="flex h-[80px] items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-3 group">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent-yellow to-accent-coral shadow-glow-accent transition-all duration-300 group-hover:scale-110">
-                  <span className="text-xl font-bold text-black font-grotesk">FF</span>
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-primary-700 shadow-soft transition-all duration-300 group-hover:shadow-card">
+                  <span className="text-lg font-bold text-white font-grotesk">FF</span>
                 </div>
                 <span className="text-xl font-bold text-text-primary font-grotesk hidden sm:block">
                   Fresh Fiber
@@ -55,17 +55,17 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium transition-all duration-300 relative group ${
+                  className={`text-base font-medium transition-all duration-200 relative group ${
                     isActive(item.href)
-                      ? 'text-text-accent'
+                      ? 'text-primary-600'
                       : 'text-text-secondary hover:text-text-primary'
                   }`}
                 >
                   {item.name}
                   {isActive(item.href) && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-accent-coral to-accent-yellow rounded-full" />
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary-600 rounded-full" />
                   )}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-coral to-accent-yellow rounded-full group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-primary-600 rounded-full group-hover:w-full transition-all duration-200" />
                 </Link>
               ))}
             </div>
@@ -73,7 +73,7 @@ export function Header() {
             {/* CTA Buttons */}
             <div className="hidden lg:flex lg:items-center lg:space-x-3">
               <Link href="tel:+441234567890">
-                <button className="btn-glass text-sm">
+                <button className="btn-outline text-sm py-2.5">
                   <svg
                     className="h-4 w-4"
                     fill="none"
@@ -114,7 +114,7 @@ export function Header() {
             <div className="lg:hidden">
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-xl p-2.5 text-text-primary bg-surface-glass border border-white/10 hover:bg-white/15 transition-all duration-300"
+                className="inline-flex items-center justify-center rounded-button p-2.5 text-text-primary bg-gray-50 border border-gray-200 hover:bg-gray-100 transition-all duration-200"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <span className="sr-only">Open menu</span>
@@ -149,16 +149,16 @@ export function Header() {
 
           {/* Mobile menu */}
           {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-white/10 mt-2">
+            <div className="lg:hidden border-t border-gray-200 mt-2 bg-white">
               <div className="space-y-1 pb-4 pt-4">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-all duration-300 ${
+                    className={`block px-4 py-3 text-base font-medium rounded-button transition-all duration-200 ${
                       isActive(item.href)
-                        ? 'bg-surface-card text-text-accent border border-text-accent/20'
-                        : 'text-text-secondary hover:bg-surface-glass hover:text-text-primary'
+                        ? 'bg-primary-50 text-primary-600 border border-primary-200'
+                        : 'text-text-secondary hover:bg-gray-50 hover:text-text-primary'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -167,7 +167,7 @@ export function Header() {
                 ))}
                 <div className="mt-4 space-y-3 px-4">
                   <Link href="tel:+441234567890" className="block">
-                    <button className="btn-glass w-full justify-center">
+                    <button className="btn-outline w-full justify-center">
                       <svg
                         className="h-4 w-4"
                         fill="none"

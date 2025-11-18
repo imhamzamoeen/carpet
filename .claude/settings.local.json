@@ -22,7 +22,13 @@
       "Bash(node -e:*)",
       "Bash(timeout /t 10 /nobreak)",
       "Bash(curl:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout /t 2 /nobreak)",
+      "Bash(nul)",
+      "Bash(timeout /t 5 /nobreak)",
+      "Bash(cat:*)",
+      "Bash(\"c:\\laragon\\www\\Carpet\\.claude\\Todo\\planner_backup.md\")"
     ],
     "deny": [],
     "ask": []

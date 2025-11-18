@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from 'next/font/google';
+import Script from 'next/script';
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
+import { generateOrganizationSchema, generateWebSiteSchema } from '@/lib/seo/structured-data';
 
-// Dark Neomorphic Typography System
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -17,24 +18,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Fresh Fiber Carpet Cleaning Manchester | Professional Deep Clean",
-    template: "%s | Fresh Fiber Carpet Cleaning"
-  },
-  description: "FreshFiber offers expert carpet cleaning in Manchester. Professional deep clean for carpets, rugs & upholstery. Same-day service, eco-friendly, 100% guarantee. Serving 100 miles.",
-  keywords: "Fresh Fiber Carpet cleaning Manchester, carpet cleaning Manchester, rug cleaning, upholstery cleaning, professional carpet cleaners Manchester, eco-friendly carpet cleaning, same day carpet cleaning",
-  authors: [{ name: "Fresh Fiber Carpet Cleaning Team" }],
-  creator: "Fresh Fiber Carpet Cleaning",
-  publisher: "Fresh Fiber Carpet Cleaning",
   metadataBase: new URL('https://freshfibercleaning.co.uk'),
-  alternates: {
-    canonical: '/',
+  title: {
+    default: 'Fresh Fiber Carpet Cleaning',
+    template: '%s | Fresh Fiber Carpet Cleaning'
   },
-  openGraph: {
-    type: 'website',
-    locale: 'en_GB',
-    siteName: 'Fresh Fiber Carpet Cleaning',
-  },
+  description: 'Professional carpet cleaning services in Manchester and Greater Manchester.',
   robots: {
     index: true,
     follow: true,
@@ -47,9 +36,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
   },
 };
 
@@ -58,9 +45,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="antialiased flex min-h-screen flex-col font-sans">
+    <html lang="en-GB" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
+        />
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateWebSiteSchema()) }}
+        />
+
+        {/* Google Analytics 4 */}
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+      </head>
+      <body className="font-inter antialiased flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

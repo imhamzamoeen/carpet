@@ -3,31 +3,31 @@ alwaysApply: false
 ---
 
 ✅ Expert-Level On-Page SEO Checklist
-being an expert seo master, please follow all the parts while developing a feature 
+being an expert seo master, please follow all the parts while developing a feature
 
 Part 1: Strategic & Foundational Blueprint
 
 1.1 Align with User Intent & Semantic SEO
 
-Target informational + transactional intent: “Do I qualify for a free boiler upgrade?”, “How to apply for ECO4”, “ECO4 eligibility checker UK”.
+Target informational + transactional intent: "How much does carpet cleaning cost?", "Best carpet cleaners near me", "Professional carpet cleaning Manchester".
 
-Build keyword clusters: primary (“free boiler upgrade UK”, “ECO4 boiler grant”) + related (“boiler replacement scheme”, “Ofgem ECO4 criteria”, “ECO4 vs ECO5 changes”).
+Build keyword clusters: primary ("carpet cleaning Manchester", "professional carpet cleaners near me") + related ("carpet steam cleaning", "upholstery cleaning Manchester", "rug cleaning near me").
 
-Benchmark SERPs & identify information gain: competitors often have thin FAQs → create deeper step-by-step guides, timelines, and eligibility calculators.
+Benchmark SERPs & identify information gain: competitors often have thin FAQs → create deeper step-by-step guides, before/after galleries, and pricing calculators.
 
-Ensure people-first content: add original data (approval rates, timelines, postcode coverage heatmaps).
+Ensure people-first content: add original data (customer reviews, average cleaning times, service area coverage maps).
 
 1.2 Demonstrate E-E-A-T
 
-Add author bio (“Energy Grants Specialist”), company credentials, and case studies/testimonials.
+Add author bio ("Carpet Cleaning Specialist"), company credentials (IICRC certified, years in business), and case studies/testimonials.
 
-Build About, Contact, Editorial Policy pages for trust signals.
+Build About, Contact, Privacy Policy pages for trust signals.
 
-Link to authoritative sources: Ofgem, GOV.UK, council websites.
+Link to authoritative sources: IICRC, NCCA, industry associations.
 
 Implement Author + Organization Schema.
 
-Add “Last Updated” date (critical: LLMs and Google’s AI Overviews reward freshness).
+Add "Last Updated" date (critical: LLMs and Google's AI Overviews reward freshness).
 
 Part 2: Core Technical Implementation
 
@@ -35,13 +35,17 @@ Part 2: Core Technical Implementation
 
 Create clean URLs:
 
-/eco4/eligibility-checker
+/carpet-cleaning
 
-/eco4/how-to-apply
+/upholstery-cleaning
 
-/eco4/documents
+/rug-cleaning
 
-/eco4/updates (changelog).
+/mattress-cleaning
+
+/areas/manchester
+
+/areas/trafford
 
 Use HTTPS only, redirect non-preferred versions.
 
@@ -65,9 +69,9 @@ Add hreflang if multi-region (UK vs. other).
 
 2.4 Internal Linking
 
-Each key page (Eligibility / HowTo / Updates) should get 3+ contextual links.
+Each key page (Services / Areas / Reviews) should get 3+ contextual links.
 
-Use descriptive anchors (“check ECO4 eligibility”, “apply for free boiler grant”).
+Use descriptive anchors ("carpet cleaning in Manchester", "professional upholstery cleaning", "rug cleaning near me").
 
 Avoid orphan pages.
 
@@ -77,27 +81,27 @@ Part 3: On-Page Content & Elements
 
 Titles:
 
-“Free Boiler Upgrade UK (2025) – Check ECO4 Eligibility in 60 Seconds”
+"Carpet Cleaning Manchester | Professional Service | Fresh Fiber"
 
 Keep <60 chars, keyword front-loaded.
 
 Meta descriptions: compelling, <155 chars, with CTA:
 
-“Check if you qualify for a free ECO4 boiler upgrade. Quick eligibility tool, updated October 2025.”
+"Expert carpet cleaning in Manchester. Same-day service, eco-friendly methods, 100% satisfaction guarantee. Get your free quote in 60 seconds."
 
 3.2 Heading Structure
 
-H1: “Free Boiler Upgrade UK (ECO4 Scheme 2025)”
+H1: "Professional Carpet Cleaning in Manchester"
 
-H2s: “Who Qualifies”, “How to Apply”, “Required Documents”, “ECO4 vs ECO5 Updates”.
+H2s: "Our Cleaning Services", "Why Choose Fresh Fiber", "Areas We Cover", "What Our Customers Say".
 
 3.3 Visual & Media Optimization
 
-Use WebP images (clean infographic: eligibility steps).
+Use WebP images (before/after photos, cleaning process).
 
-Alt text with keywords (“ECO4 boiler upgrade eligibility checker screenshot”).
+Alt text with keywords ("Professional carpet cleaning service in Manchester living room").
 
-If using video (explainer), add VideoObject schema.
+If using video (cleaning process), add VideoObject schema.
 
 3.4 Readability & Formatting
 
@@ -127,7 +131,7 @@ Table of contents with jump links → LLMs & users can navigate sections quickly
 
 HTTPS only.
 
-Trust badges (Gas Safe, PAS2035, Ofgem).
+Trust badges (IICRC Certified, NCCA Member, Insurance).
 
 Reviews/testimonials on LocalBusiness schema.
 
@@ -151,22 +155,22 @@ BreadcrumbList.
 
 5.2 AI & SERP Optimization
 
-Explicitly map entities to Knowledge Graph: “ECO4 scheme” → Ofgem entity, “Free boiler upgrade UK” → grant programs.
+Explicitly map entities to Knowledge Graph: "Fresh Fiber Carpet Cleaning" → local business entity, "carpet cleaning Manchester" → service + location.
 
 Optimize FAQs for AI Overviews (short, declarative answers).
 
-Add “speakable” schema for voice queries (“How do I apply for ECO4?”).
+Add "speakable" schema for voice queries ("How much does carpet cleaning cost?", "Best carpet cleaners near me").
 
-Interlink eligibility, how-to, and updates pages → topical authority.
+Interlink service pages, area pages, and FAQ pages → topical authority.
 
 Part 6: Engagement & Long-Term SEO
 
 6.1 User Engagement
 
-Strong above-the-fold CTA: “Check Eligibility in 60 Seconds (Free)”.
+Strong above-the-fold CTA: "Get Your Free Quote in 60 Seconds".
 
-Add related articles widget (“ECO4 vs ECO5”, “Boiler Grants in Scotland”).
+Add related articles widget ("Carpet Cleaning Cost Guide", "How to Remove Wine Stains", "DIY vs Professional Cleaning").
 
-Interactive tools (eligibility calculator, postcode checker) = higher engagement → AI finds them cite-worthy.
+Interactive tools (quote calculator, postcode checker, service area map) = higher engagement → AI finds them cite-worthy.
 
-Blog “Updates” section refreshed monthly → freshness keeps you in Copilot’s index.
+Blog "Updates" section refreshed monthly → freshness keeps you in Copilot's index.
