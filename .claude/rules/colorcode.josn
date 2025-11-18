@@ -1,0 +1,161 @@
+{
+  "design_system": {
+    "brand_style": {
+      "theme": "Dark Neomorphic Gradient UI",
+      "vibe": "Modern, premium, futuristic with soft glow surfaces",
+      "overall_feel": "High contrast foreground, soft background gradients, polished and minimal"
+    },
+
+    "color_palette": {
+      "background": {
+        "primary": "#0C0C0C",
+        "secondary": "#121212",
+        "gradient_blur_zones": [
+          "radial-gradient(circle, rgba(255,140,120,0.25), transparent)",
+          "radial-gradient(circle, rgba(200,80,255,0.25), transparent)"
+        ]
+      },
+      "surface": {
+        "card": "#1A1A1A",
+        "card_glow": "rgba(255,120,140,0.35)"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#C5C5C5",
+        "accent": "#FF9C90"
+      },
+      "accents": {
+        "button_yellow": "#FFCC48",
+        "nav_glass": "rgba(255,255,255,0.1)"
+      }
+    },
+
+    "typography": {
+      "font_family": "Grotesk / Sans-serif",
+      "headline_style": {
+        "weight": "700",
+        "tracking": "-1%",
+        "lineHeight": "110%",
+        "case": "sentence_case",
+        "color_accent_rule": "Use gradient/accent on specific keywords"
+      },
+      "body": {
+        "size": "16px",
+        "lineHeight": "150%",
+        "color": "#C5C5C5"
+      },
+      "label": {
+        "size": "14px",
+        "color": "#AAAAAA"
+      }
+    },
+
+    "layout": {
+      "container_width": "1200px",
+      "padding_x": "2rem",
+      "hero_spacing": "140px top & bottom",
+      "section_spacing": "100px spacing between sections",
+      "grid_system": {
+        "columns": 12,
+        "gutter": "24px"
+      }
+    },
+
+    "shapes_and_styles": {
+      "buttons": {
+        "shape": "full-rounded-pill",
+        "padding": "12px 28px",
+        "styles": {
+          "primary": {
+            "background": "#FFCC48",
+            "text_color": "#000"
+          },
+          "glass": {
+            "background": "rgba(255,255,255,0.08)",
+            "border": "1px solid rgba(255,255,255,0.2)"
+          }
+        }
+      },
+      "cards": {
+        "style": "rounded-2xl",
+        "background": "#1A1A1A",
+        "shadow": "soft-glow-with-gradient"
+      },
+      "image_masks": {
+        "hero": "rounded-ellipse-shapes",
+        "blog_cover": "rounded-2xl"
+      }
+    },
+
+    "ui_components": {
+      "navbar": {
+        "style": "glassmorphic",
+        "height": "70px",
+        "alignment": "centered-links + right CTA button",
+        "scroll_behavior": "sticky with increased translucency"
+      },
+      "hero_section": {
+        "headline_left_text_right_images": true,
+        "highlighted_keywords": true,
+        "pill_button": true,
+        "gradient_background_blur": true
+      },
+      "logo_cluster_strip": {
+        "style": "pill logos on soft blurred bar"
+      },
+      "stats_section": {
+        "large_stat_numbers": true,
+        "two_column_layout": true
+      },
+      "blog_cards": {
+        "layout": "grid",
+        "ratio": "horizontal_card + square_card mix"
+      },
+      "contact_form": {
+        "input_style": "dark_glass_inputs",
+        "button": "glow_accent"
+      }
+    },
+
+    "animations": {
+      "type": "subtle micro-interactions",
+      "rules": {
+        "fade_in_sections": "on scroll, 40% viewport threshold",
+        "hero_images": "slow upward float or parallax drift",
+        "buttons": "soft scale on hover",
+        "cards": "shadow intensify on hover",
+        "logo_strip": "horizontal scroll / slight motion"
+      }
+    },
+
+    "section_structure": {
+      "homepage": [
+        "Navbar (glass, floating)",
+        "Hero (2-column: headline + images, gradients)",
+        "Brand logo strip",
+        "About summary with stats",
+        "Service/solution cards",
+        "Featured project or testimonial block",
+        "Blog preview section",
+        "Footer"
+      ],
+      "about_page": [
+        "Intro hero with headline + team photo",
+        "Stats row",
+        "Why choose us section (icon list)",
+        "Team gallery",
+        "CTA block"
+      ],
+      "blog_page": [
+        "Blog hero title",
+        "Card grid (3 or 2 columns)",
+        "Sidebar optional"
+      ],
+      "contact_page": [
+        "Left column text",
+        "Right column form",
+        "Dark gradient background"
+      ]
+    }
+  }
+}

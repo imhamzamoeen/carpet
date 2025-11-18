@@ -21,7 +21,8 @@
       "Bash(find:*)",
       "Bash(node -e:*)",
       "Bash(timeout /t 10 /nobreak)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []

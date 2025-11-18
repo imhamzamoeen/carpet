@@ -1,123 +1,103 @@
-    Home Page Sections
-1. Hero / Value Proposition
-2. Social Proof Snapshot (Stars/Badges)
-3. Services Overview Grid
-4. How It Works (3 Steps)
-5. Before & After Gallery
-6. Why Choose Us (Benefits)
-7. Coverage Area (Manchester + towns)
-8. Customer Reviews
-9. Instant Quote / Booking CTA section
-10. FAQs
-11. About the Company (Mini Story)
-12. Final CTA Banner (Quote + WhatsApp/Call)
+HOMEPAGE BREAKDOWN (Section-by-Section)
+1. NAVBAR
 
+Glassmorphic translucent bar
 
+Logo left, navigation center, CTA button on right
 
+Rounded pill CTA
 
+Hover: subtle scale + brightness increase
 
+Sticky on scroll
 
-🔹 Core Public Pages (Customer-facing)
+2. HERO SECTION
 
-Home
+Layout
 
-Main landing + all sections we just listed.
+Left:
+big bold text, accent words colored
+small paragraph
+pill button + small avatar group
 
-Instant Quote / Booking
+Right:
+two vertically-stacked ellipse-masked images
+soft glow gradient behind them
 
-URL: /quote or /book
+Background
 
-Full multi-step form + live price estimate.
+Dark
 
-Services (Overview)
+Large radial gradient glows behind hero elements
 
-URL: /services
+Orange–pink–purple hues
 
-Grid of all services with short blurbs + links to detail pages.
+Animations
 
-Individual Service Pages (SEO-heavy)
+Text fade-in upwards
 
-/services/carpet-cleaning
+Images floating slowly (2–4px Y drifting)
 
-/services/rug-cleaning
+3. LOGO / BRAND STRIP
 
-/services/upholstery-cleaning
+A horizontal row of brand icons in dark pill containers
 
-/services/leather-cleaning
+Subtle glass effect
 
-/services/mattress-cleaning
+On hover: slight elevation + glow
 
-/services/stain-removal
+4. “We work with you…” SECTION
 
-/services/commercial-cleaning
+Centered large headline with accent words
 
-/services/car-valeting
-Each with details, FAQs, local keywords, CTA → quote.
+Two columns below:
+left = statistic card
+right = team image
 
-Areas We Cover / Service Area
+Soft shadows
 
-URL: /areas-we-cover
+Animations:
 
-List of towns/cities within ~100 miles of Manchester + internal links to relevant service pages. Local SEO booster.
+Fade in from bottom when entering viewport
 
-About Us
+5. PROJECT DETAILS / SERVICES BLOCK
 
-URL: /about
+2–3 column layout
 
-Story, team, experience, certifications, trust content.
+Large image card on left, text on right
 
-Reviews / Testimonials
+Soft gradient glow around card
 
-URL: /reviews
+Background remains pure dark
 
-All customer reviews, pulled or curated. Great social proof.
+Buttons: pill yellow or glass style
 
-Gallery / Before & After
+6. SUBSEQUENT INFO SECTIONS
 
-URL: /gallery
+All follow similar:
 
-Image grid / sliders, filters by service (carpet, sofa, car, etc.).
+Big headline (accented words)
 
-FAQs
+Card grids
 
-URL: /faqs
+Stats in pill counters
 
-Global FAQ page (general + booking + payment), plus FAQ snippets reused on other pages.
+Images in rounded-rect masks
 
-Contact
+7. BLOG PREVIEW
 
-URL: /contact
+Grid of cards
 
-Simple contact form + phone, email, WhatsApp, address, map.
+Each card:
+rounded, dark, faint gradient overlay
+image top, text bottom
 
-Blog / Cleaning Tips (optional but powerful)
+Hover: lift effect
 
-URL: /blog
+8. FOOTER
 
-/blog/[slug] for individual posts (SEO hub for long-tail, authority, E-E-A-T).
+Minimal dark footer
 
-🔹 Legal / Trust Pages (Footer)
+Simple links
 
-Privacy Policy – /privacy-policy
-
-Terms & Conditions – /terms
-
-Cookies Policy – /cookies (if doing cookie banner / tracking)
-
-These are boring but mandatory for trust + compliance.
-
-🔹 Admin / System Pages (Not public, but part of the app)
-
-Admin Login – /admin/login
-
-Leads Dashboard – /admin/leads
-
-View/filter/export all quote/booking submissions.
-
-Settings / Pricing Config (later) – /admin/settings
-
-Manage base prices, distance multipliers, min charges, etc.
-
-Reviews & Gallery Manager – /admin/content
-
-Add/edit testimonials, upload before/after images.
+Light text on black background
