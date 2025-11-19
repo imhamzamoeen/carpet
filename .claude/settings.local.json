@@ -28,7 +28,8 @@
       "Bash(nul)",
       "Bash(timeout /t 5 /nobreak)",
       "Bash(cat:*)",
-      "Bash(\"c:\\laragon\\www\\Carpet\\.claude\\Todo\\planner_backup.md\")"
+      "Bash(\"c:\\laragon\\www\\Carpet\\.claude\\Todo\\planner_backup.md\")",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

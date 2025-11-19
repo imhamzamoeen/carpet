@@ -15,12 +15,19 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Validate form data
-    const validatedData = quoteFormSchema.parse(body);
+    // Validate form data using safeParse for type safety
+    const validationResult = quoteFormSchema.safeParse(body);
+
+    if (!validationResult.success) {
+      return NextResponse.json(
+        { success: false, errors: validationResult.error.issues },
+        { status: 400 }
+      );
+    }
 
     // Submit to Google Sheets
     const result = await submitLeadToGoogleSheets({
-      ...validatedData,
+      ...validationResult.data,
       timestamp: new Date().toISOString(),
     });
 
@@ -30,13 +37,7 @@ export async function POST(request: NextRequest) {
       throw new Error('Failed to submit quote');
     }
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { success: false, errors: error.errors },
-        { status: 400 }
-      );
-    }
-
+    console.error('Quote submission error:', error);
     return NextResponse.json(
       { success: false, message: 'Internal server error' },
       { status: 500 }
