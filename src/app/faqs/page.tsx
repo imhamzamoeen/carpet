@@ -10,13 +10,13 @@ import { Button, Card, CardContent } from '@/components/ui'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FAQs | Method Clean - Carpet & Upholstery Cleaning Manchester',
+  title: 'FAQs | Blowup Cleaners - Carpet & Upholstery Cleaning Manchester',
   description:
     'Frequently asked questions about carpet cleaning, upholstery cleaning, pricing, booking, and our services in Manchester. Get answers to all your cleaning questions.',
   keywords:
     'carpet cleaning FAQ, upholstery cleaning questions, cleaning cost, how long does carpet cleaning take, carpet drying time, eco-friendly cleaning',
   openGraph: {
-    title: 'Frequently Asked Questions - Method Clean',
+    title: 'Frequently Asked Questions - Blowup Cleaners',
     description: 'Get answers to common questions about our carpet and upholstery cleaning services',
     type: 'website'
   }

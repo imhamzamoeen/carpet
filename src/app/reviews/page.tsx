@@ -10,13 +10,13 @@ import { Button, Card, CardContent } from '@/components/ui'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Customer Reviews | Method Clean - Carpet Cleaning Manchester',
+  title: 'Customer Reviews | Blowup Cleaners - Carpet Cleaning Manchester',
   description:
     'Read reviews from over 1,000 satisfied customers across Manchester. See why we\'re rated 4.9/5 for carpet and upholstery cleaning services.',
   keywords:
     'carpet cleaning reviews Manchester, customer testimonials, cleaning service reviews, best carpet cleaner Manchester, 5 star reviews',
   openGraph: {
-    title: 'Customer Reviews - Method Clean',
+    title: 'Customer Reviews - Blowup Cleaners',
     description: 'See what our customers say about our carpet cleaning services',
     type: 'website'
   }
@@ -40,7 +40,7 @@ const reviews: Review[] = [
     date: '2024-10-15',
     service: 'Carpet Cleaning',
     review:
-      'Absolutely fantastic service! My carpets look brand new. The team was professional, punctual, and very thorough. They removed stains I thought were permanent. The carpets dried within 3 hours as promised. Highly recommend Method Clean!',
+      'Absolutely fantastic service! My carpets look brand new. The team was professional, punctual, and very thorough. They removed stains I thought were permanent. The carpets dried within 3 hours as promised. Highly recommend Blowup Cleaners!',
     verified: true
   },
   {
@@ -60,7 +60,7 @@ const reviews: Review[] = [
     date: '2024-10-05',
     service: 'End of Tenancy Cleaning',
     review:
-      'Needed a full carpet clean for my rental property. Method Clean did an excellent job and I got my full deposit back! They were flexible with scheduling and the price was very competitive. Thank you!',
+      'Needed a full carpet clean for my rental property. Blowup Cleaners did an excellent job and I got my full deposit back! They were flexible with scheduling and the price was very competitive. Thank you!',
     verified: true
   },
   {
@@ -70,7 +70,7 @@ const reviews: Review[] = [
     date: '2024-09-28',
     service: 'Pet Odor Removal',
     review:
-      'Our dog had several accidents on the carpet and the smell was awful. Method Clean used enzyme treatment that completely eliminated the odor. Can\'t believe the difference! Professional service from start to finish.',
+      'Our dog had several accidents on the carpet and the smell was awful. Blowup Cleaners used enzyme treatment that completely eliminated the odor. Can\'t believe the difference! Professional service from start to finish.',
     verified: true
   },
   {
@@ -90,7 +90,7 @@ const reviews: Review[] = [
     date: '2024-09-18',
     service: 'Commercial Cleaning',
     review:
-      'We use Method Clean for our office carpets quarterly. Always reliable, professional, and they work around our schedule. The difference is noticeable and our staff appreciate the clean environment. Excellent commercial service.',
+      'We use Blowup Cleaners for our office carpets quarterly. Always reliable, professional, and they work around our schedule. The difference is noticeable and our staff appreciate the clean environment. Excellent commercial service.',
     verified: true
   },
   {
@@ -100,7 +100,7 @@ const reviews: Review[] = [
     date: '2024-09-12',
     service: 'Stain Removal',
     review:
-      'Had a wine stain on my cream carpet that I thought was ruined. Method Clean worked magic on it! The stain is completely gone. They also cleaned the whole room and it looks incredible. So grateful for their expertise!',
+      'Had a wine stain on my cream carpet that I thought was ruined. Blowup Cleaners worked magic on it! The stain is completely gone. They also cleaned the whole room and it looks incredible. So grateful for their expertise!',
     verified: true
   },
   {
@@ -140,7 +140,7 @@ const reviews: Review[] = [
     date: '2024-08-25',
     service: 'Carpet Cleaning',
     review:
-      'Third time using Method Clean and they never disappoint. Consistent quality, friendly service, and fair prices. My go-to for all carpet cleaning needs. The instant online quote is very convenient too!',
+      'Third time using Blowup Cleaners and they never disappoint. Consistent quality, friendly service, and fair prices. My go-to for all carpet cleaning needs. The instant online quote is very convenient too!',
     verified: true
   },
   {
@@ -170,7 +170,7 @@ const reviews: Review[] = [
     date: '2024-08-10',
     service: 'Pet Stain Removal',
     review:
-      'Had multiple pet stains from our new puppy. Method Clean was patient and thorough, treating each stain properly. Used UV light to find hidden stains too! All stains and odors are gone. Life saver!',
+      'Had multiple pet stains from our new puppy. Blowup Cleaners was patient and thorough, treating each stain properly. Used UV light to find hidden stains too! All stains and odors are gone. Life saver!',
     verified: true
   },
   {
@@ -180,7 +180,7 @@ const reviews: Review[] = [
     date: '2024-08-05',
     service: 'End of Tenancy Cleaning',
     review:
-      'Used Method Clean when moving out of my flat. They did an amazing job on the carpets and the landlord was very impressed. Got my deposit back without any deductions. Affordable and reliable service!',
+      'Used Blowup Cleaners when moving out of my flat. They did an amazing job on the carpets and the landlord was very impressed. Got my deposit back without any deductions. Affordable and reliable service!',
     verified: true
   }
 ]
@@ -198,7 +198,7 @@ const generateReviewSchema = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Method Clean',
+    name: 'Blowup Cleaners',
     image: 'https://methodclean.co.uk/logo.png',
     aggregateRating,
     review: reviews.map((review) => ({

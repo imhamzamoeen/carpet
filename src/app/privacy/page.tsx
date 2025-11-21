@@ -8,8 +8,8 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Method Clean',
-  description: 'Method Clean privacy policy - how we collect, use, and protect your personal data.',
+  title: 'Privacy Policy | Blowup Cleaners',
+  description: 'Blowup Cleaners privacy policy - how we collect, use, and protect your personal data.',
   robots: 'noindex, nofollow'
 }
 
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         <div className="prose prose-lg mt-8 max-w-none">
           <h2 className="text-2xl font-bold text-gray-900 mt-8">1. Introduction</h2>
           <p className="text-gray-700">
-            Method Clean ("we", "our", or "us") is committed to protecting your privacy. This
+            Blowup Cleaners ("we", "our", or "us") is committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard your information
             when you visit our website or use our services.
           </p>
@@ -217,7 +217,7 @@ export default function PrivacyPage() {
           </p>
           <div className="mt-4 rounded-lg bg-gray-50 p-6">
             <p className="text-gray-700">
-              <strong>Method Clean</strong>
+              <strong>Blowup Cleaners</strong>
               <br />
               Email:{' '}
               <a

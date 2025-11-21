@@ -1,5 +1,5 @@
 # System Architecture - Carpet Cleaning Service Platform
-## Method Clean - Full-Stack Architecture Document
+## Blowup Cleaners - Full-Stack Architecture Document
 
 **Version:** 1.0
 **Date:** 2025-11-16
@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-This document defines the complete system architecture for Method Clean's customer-facing booking platform and administrative dashboard. The system enables instant quote generation, multi-step booking forms, payment processing, and comprehensive admin management for a carpet cleaning service operating within 100 miles of Manchester, UK.
+This document defines the complete system architecture for Blowup Cleaners's customer-facing booking platform and administrative dashboard. The system enables instant quote generation, multi-step booking forms, payment processing, and comprehensive admin management for a carpet cleaning service operating within 100 miles of Manchester, UK.
 
 **Key Architectural Decisions:**
 - **Next.js 16** (App Router) for full-stack framework
@@ -349,7 +349,7 @@ model BlogPost {
   featuredImageUrl String?
 
   // Publishing
-  authorName      String   @default("Method Clean Team")
+  authorName      String   @default("Blowup Cleaners Team")
   isPublished     Boolean  @default(false)
 
   @@map("blog_posts")
@@ -982,7 +982,7 @@ export async function sendBookingConfirmation(booking: Booking) {
   const customerEmail = {
     from: `"${process.env.NEXT_PUBLIC_BUSINESS_NAME}" <${process.env.SMTP_USER}>`,
     to: booking.email,
-    subject: 'Booking Confirmation - Method Clean',
+    subject: 'Booking Confirmation - Blowup Cleaners',
     html: `
       <h1>Thank you for your booking!</h1>
       <p>Hi ${booking.name},</p>
@@ -998,7 +998,7 @@ export async function sendBookingConfirmation(booking: Booking) {
 
       <p>We'll review your booking and confirm within 24 hours.</p>
 
-      <p>Best regards,<br>Method Clean Team</p>
+      <p>Best regards,<br>Blowup Cleaners Team</p>
     `
   }
 
@@ -1044,7 +1044,7 @@ export async function sendBookingStatusUpdate(
   const statusMessages = {
     CONFIRMED: 'Your booking has been confirmed!',
     IN_PROGRESS: 'We\'re on our way!',
-    COMPLETED: 'Thank you for choosing Method Clean',
+    COMPLETED: 'Thank you for choosing Blowup Cleaners',
     CANCELLED: 'Your booking has been cancelled'
   }
 
@@ -1061,7 +1061,7 @@ export async function sendBookingStatusUpdate(
 
       <p>If you have any questions, please don't hesitate to contact us.</p>
 
-      <p>Best regards,<br>Method Clean Team</p>
+      <p>Best regards,<br>Blowup Cleaners Team</p>
     `
   })
 }
@@ -1213,7 +1213,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
       title: service.metaTitle,
       description: service.metaDescription,
       url: `https://methodclean.co.uk/services/${service.slug}`,
-      siteName: 'Method Clean',
+      siteName: 'Blowup Cleaners',
       images: ['/images/og-image.jpg'],
       locale: 'en_GB',
       type: 'website'
@@ -1237,7 +1237,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  'name': 'Method Clean',
+  'name': 'Blowup Cleaners',
   'image': 'https://methodclean.co.uk/images/logo.png',
   'telephone': '+44-XXX-XXX-XXXX',
   'address': {
@@ -1607,7 +1607,7 @@ chore: Update dependencies
 
 ## 14. Conclusion
 
-This architecture provides a solid foundation for Method Clean's digital presence, balancing:
+This architecture provides a solid foundation for Blowup Cleaners's digital presence, balancing:
 
 ✅ **Performance** - Fast load times, excellent Core Web Vitals
 ✅ **Scalability** - Can grow from 100 to 10,000 bookings/month

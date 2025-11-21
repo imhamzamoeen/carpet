@@ -8,8 +8,8 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | Method Clean',
-  description: 'Information about how Method Clean uses cookies and similar technologies.',
+  title: 'Cookie Policy | Blowup Cleaners',
+  description: 'Information about how Blowup Cleaners uses cookies and similar technologies.',
   robots: 'noindex, nofollow'
 }
 
@@ -30,7 +30,7 @@ export default function CookiesPage() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8">2. How We Use Cookies</h2>
           <p className="text-gray-700">
-            Method Clean uses cookies and similar technologies to:
+            Blowup Cleaners uses cookies and similar technologies to:
           </p>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>Ensure our website functions properly</li>
@@ -293,7 +293,7 @@ export default function CookiesPage() {
           </p>
           <div className="mt-4 rounded-lg bg-gray-50 p-6">
             <p className="text-gray-700">
-              <strong>Method Clean</strong>
+              <strong>Blowup Cleaners</strong>
               <br />
               Email:{' '}
               <a

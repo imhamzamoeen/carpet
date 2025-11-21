@@ -1,6 +1,6 @@
-# Method Clean - Carpet Cleaning Service Platform
+# Blowup Cleaners - Carpet Cleaning Service Platform
 
-A comprehensive, production-ready Next.js web platform for Method Clean - a professional carpet cleaning service in Manchester. This platform provides a complete online presence with instant quotes, multi-step booking forms, admin panel, and integrated lead management.
+A comprehensive, production-ready Next.js web platform for Blowup Cleaners - a professional carpet cleaning service in Manchester. This platform provides a complete online presence with instant quotes, multi-step booking forms, admin panel, and integrated lead management.
 
 ## Features
 
@@ -438,11 +438,11 @@ npm run build
 
 ## Contributing
 
-This is a proprietary project for Method Clean. For bug reports or feature requests, please contact the development team.
+This is a proprietary project for Blowup Cleaners. For bug reports or feature requests, please contact the development team.
 
 ## License
 
-Proprietary - All rights reserved © Method Clean 2024
+Proprietary - All rights reserved © Blowup Cleaners 2024
 
 ## Support
 
@@ -452,4 +452,4 @@ For technical support or questions:
 
 ---
 
-**Built with Next.js 16 for Method Clean - Professional Carpet Cleaning in Manchester**
+**Built with Next.js 16 for Blowup Cleaners - Professional Carpet Cleaning in Manchester**

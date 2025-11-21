@@ -48,7 +48,8 @@
       "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\src\\app\\admin'' -Recurse -Force\")",
       "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\src\\actions'' -Recurse -Force\")",
       "Bash(powershell -Command \"Test-Path ''c:\\laragon\\www\\Carpet\\src\\lib\\actions''\")",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []

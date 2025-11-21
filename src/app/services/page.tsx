@@ -1,23 +1,24 @@
 /**
- * Services Overview Page
+ * Services Overview Page - Award-Winning Design
  *
- * Complete list of all cleaning services offered
+ * Complete list of all cleaning services with premium UI/UX
+ * Features: 3D cards, spotlight effects, animated text, moving borders
  */
 
-import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui'
 import type { Metadata } from 'next'
+import { ServiceCard } from './service-card-client'
 
 export const metadata: Metadata = {
-  title: 'Our Services | Method Clean - Professional Cleaning Services Manchester',
+  title: 'Cleaning Services Manchester | Professional Carpet & Upholstery Cleaners',
   description:
-    'Professional carpet cleaning, upholstery cleaning, rug cleaning, and more in Manchester. Expert cleaning services with eco-friendly products and guaranteed results.',
+    'Expert cleaning services in Manchester, Salford & Trafford. Professional carpet cleaning, upholstery cleaning, rug cleaning from £25. Same day service. 5★ rated. Call 07405 428259.',
   keywords:
-    'carpet cleaning Manchester, upholstery cleaning, rug cleaning, stain removal, pet odor removal, sofa cleaning, mattress cleaning, commercial cleaning',
+    'cleaning services Manchester, carpet cleaning Manchester, upholstery cleaning Manchester, professional cleaners Manchester, rug cleaning Manchester, Manchester cleaning company, deep cleaning services Manchester',
   openGraph: {
-    title: 'Our Services - Method Clean',
-    description: 'Professional cleaning services in Manchester and surrounding areas',
+    title: 'Cleaning Services Manchester | Blowup Cleaners',
+    description: 'Professional carpet & upholstery cleaning in Manchester. Same day service available. From £25 per room. 5★ rated.',
     type: 'website'
   }
 }
@@ -38,16 +39,8 @@ const services = [
       'Pre-treatment of heavy stains'
     ],
     pricing: 'From £25 per room',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-        />
-      </svg>
-    )
+    gradient: 'from-blue-500 to-cyan-500',
+    icon: '🏠'
   },
   {
     slug: 'upholstery-cleaning',
@@ -64,16 +57,8 @@ const services = [
       'Scotchgard protection available'
     ],
     pricing: 'From £40 per item',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-        />
-      </svg>
-    )
+    gradient: 'from-purple-500 to-pink-500',
+    icon: '🛋️'
   },
   {
     slug: 'rug-cleaning',
@@ -90,16 +75,8 @@ const services = [
       'Color restoration services'
     ],
     pricing: 'From £35 per rug',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-        />
-      </svg>
-    )
+    gradient: 'from-amber-500 to-orange-500',
+    icon: '🎨'
   },
   {
     slug: 'stain-removal',
@@ -116,16 +93,8 @@ const services = [
       'Guarantee on stain removal'
     ],
     pricing: 'From £15 (add-on)',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-        />
-      </svg>
-    )
+    gradient: 'from-red-500 to-rose-500',
+    icon: '💧'
   },
   {
     slug: 'pet-odor-removal',
@@ -142,16 +111,8 @@ const services = [
       'Safe for pets and children'
     ],
     pricing: 'From £50',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    )
+    gradient: 'from-green-500 to-emerald-500',
+    icon: '🐾'
   },
   {
     slug: 'end-of-tenancy-cleaning',
@@ -168,16 +129,8 @@ const services = [
       'Certified cleaning report'
     ],
     pricing: 'From £150 per property',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-        />
-      </svg>
-    )
+    gradient: 'from-indigo-500 to-purple-500',
+    icon: '🔑'
   },
   {
     slug: 'mattress-cleaning',
@@ -194,16 +147,8 @@ const services = [
       'All mattress types and sizes'
     ],
     pricing: 'From £30 per mattress',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-        />
-      </svg>
-    )
+    gradient: 'from-sky-500 to-blue-500',
+    icon: '🛏️'
   },
   {
     slug: 'commercial-cleaning',
@@ -220,213 +165,443 @@ const services = [
       'Large-scale equipment'
     ],
     pricing: 'Custom quote',
-    icon: (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-        />
-      </svg>
-    )
+    gradient: 'from-slate-600 to-gray-700',
+    icon: '🏢'
   }
 ]
 
 export default function ServicesPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary-600 to-primary-800 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Our Cleaning Services
+      {/* Hero Section - Manchester SEO Optimized */}
+      <div className="relative bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-24 overflow-hidden">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3djFoLTd6TTUzIDEzNGg3djFoLTd6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Trust Badge */}
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-400 text-blue-900 rounded-full text-sm font-semibold shadow-lg">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>5★ Rated Cleaning Services in Manchester</span>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Professional Cleaning Services<br />
+              <span className="text-yellow-400">Manchester & Surrounding Areas</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-primary-100">
-              Professional carpet and upholstery cleaning services for homes and businesses in
-              Manchester and surrounding areas. Expert service, eco-friendly products, guaranteed
-              results.
+
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Expert carpet cleaning, upholstery cleaning, and more. Serving Manchester, Salford, Trafford & beyond. Same day service available.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Link href="/quote">
-                <Button size="lg" variant="success">
-                  Get Instant Quote
+                <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold shadow-xl px-8 py-4 text-lg rounded-xl transition-all hover:scale-105">
+                  Get Instant Quote →
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="secondary">
-                  Contact Us
-                </Button>
-              </Link>
+              <a href="tel:07405428259" className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-xl hover:bg-white/20 transition-all">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <span>07405 428259</span>
+              </a>
+            </div>
+
+            {/* Trust Signals */}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-blue-100">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                <span className="font-medium">Same Day Service</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                <span className="font-medium">Eco-Friendly Products</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                <span className="font-medium">100% Satisfaction Guarantee</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* TL;DR for LLMs & Voice Search - CRITICAL for AI Overviews */}
+      <div className="max-w-4xl mx-auto px-6 py-12">
+        <div className="speakable-tldr bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mb-8">
+          <h2 className="speakable-headline text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Complete Cleaning Services Across Manchester
+          </h2>
+          <p className="text-lg text-gray-800 leading-relaxed font-medium text-center">
+            <strong>Blowup Cleaners</strong> provides professional carpet cleaning, upholstery cleaning, and rug cleaning services in <strong>Manchester, Salford, and Trafford</strong>. Same-day service available from <strong className="speakable-pricing">£25 per room</strong>. IICRC certified technicians, eco-friendly products, 100% satisfaction guarantee. <span className="speakable-cta">Call <a href="tel:07405428259" className="text-blue-600 font-bold hover:underline">07405 428259</a> or get an instant quote online.</span>
+          </p>
+          <div className="mt-4 text-sm text-gray-500 text-center">
+            <time dateTime="2025-01-21">Last Updated: January 21, 2025</time>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Blowup Cleaners is Manchester's trusted cleaning company, serving homes and businesses in <strong>Manchester</strong>, <strong>Salford</strong>, <strong>Trafford</strong>, and surrounding areas. From carpet cleaning to upholstery care, our certified technicians deliver exceptional results using eco-friendly products and professional-grade equipment.
+          </p>
+        </div>
+      </div>
+
       {/* Services Grid */}
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="relative max-w-7xl mx-auto px-6 py-12 sm:py-16 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service) => (
-            <div
-              key={service.slug}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-xl hover:border-primary-300"
-            >
-              <div className="flex-1 p-8">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-600 text-white group-hover:bg-primary-700 transition-colors">
-                    {service.icon}
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900">{service.name}</h2>
-                    <p className="mt-1 text-sm text-gray-500">{service.shortDescription}</p>
-                  </div>
-                </div>
+            <ServiceCard key={service.slug} service={service} />
+          ))}
+        </div>
+      </div>
 
-                <p className="mt-6 text-base text-gray-600">{service.description}</p>
+      {/* Why Choose Section - Light Background per colorcode.json */}
+      <div className="relative py-24 sm:py-32 bg-gray-50">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-base font-semibold leading-7 text-blue-600 mb-2">
+              Manchester's Trusted Cleaning Company
+            </h2>
+            <p className="text-3xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Why Choose Blowup Cleaners?
+            </p>
+          </div>
 
-                <div className="mt-6">
-                  <h3 className="text-sm font-semibold text-gray-900">What's Included:</h3>
-                  <ul className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-start text-sm text-gray-600">
-                        <svg
-                          className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-success-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: '✓',
+                title: 'Certified Technicians',
+                description: 'Fully trained and certified cleaning professionals',
+                color: 'from-blue-500 to-cyan-500'
+              },
+              {
+                icon: '🌿',
+                title: 'Eco-Friendly',
+                description: 'Safe, non-toxic cleaning products',
+                color: 'from-green-500 to-emerald-500'
+              },
+              {
+                icon: '⚡',
+                title: 'Same Day Service',
+                description: 'Available for urgent cleaning needs in Manchester',
+                color: 'from-yellow-500 to-orange-500'
+              },
+              {
+                icon: '🛡️',
+                title: '100% Guarantee',
+                description: 'Satisfaction guaranteed or re-clean free',
+                color: 'from-blue-600 to-blue-700'
+              }
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-white p-6 rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-300"
+              >
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
 
-                <div className="mt-6 flex items-center justify-between border-t border-gray-200 pt-6">
-                  <div>
-                    <p className="text-sm text-gray-500">Starting from</p>
-                    <p className="text-2xl font-bold text-primary-600">{service.pricing}</p>
+                <div className="relative">
+                  <div className={`text-5xl mb-4 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+                    {item.icon}
                   </div>
-                  <Link href={`/services/${service.slug}`}>
-                    <Button variant="default">
-                      Learn More
-                      <svg
-                        className="ml-2 h-4 w-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </Button>
-                  </Link>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {item.description}
+                  </p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section - Yellow CTA per colorcode.json */}
+      <div className="relative py-24 sm:py-32 bg-blue-600">
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            Ready for Professional Cleaning?
+          </h2>
+          <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+            Get your free instant quote today for cleaning services in Manchester. No obligation, transparent pricing, professional service guaranteed.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link href="/quote">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold shadow-xl px-10 py-5 text-lg rounded-xl transition-all hover:scale-105">
+                Get Free Quote →
+              </Button>
+            </Link>
+            <a
+              href="tel:07405428259"
+              className="group inline-flex items-center gap-2 px-10 py-5 text-lg font-semibold text-white border-2 border-white rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <span>Call 07405 428259</span>
+            </a>
+          </div>
+
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-blue-100">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>Free Quote & Survey</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>No Obligation</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>Serving All Manchester Areas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section for AI Overviews & Featured Snippets */}
+      <div className="max-w-4xl mx-auto px-6 py-16 bg-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-6">
+          {[
+            {
+              question: 'How much does carpet cleaning cost in Manchester?',
+              answer: 'Professional carpet cleaning in Manchester starts from £25 per room. The final cost depends on the carpet size, condition, and type of cleaning required. We offer free quotes with transparent pricing.'
+            },
+            {
+              question: 'Do you offer same-day cleaning services in Manchester?',
+              answer: 'Yes, we provide same-day carpet and upholstery cleaning services across Manchester, Salford, and Trafford, subject to availability. Call 07405 428259 to book urgent cleaning.'
+            },
+            {
+              question: 'What areas in Manchester do you cover?',
+              answer: 'We serve all areas across Greater Manchester including Manchester city centre, Salford, Trafford, Stockport, and surrounding postcodes within our 100-mile service radius.'
+            },
+            {
+              question: 'Are your cleaning products eco-friendly?',
+              answer: 'Yes, all our cleaning products are eco-friendly, non-toxic, and safe for children and pets. We use professional-grade green cleaning solutions approved by industry standards.'
+            },
+            {
+              question: 'How long does carpet cleaning take to dry?',
+              answer: 'With our professional steam extraction method, carpets typically dry within 2-4 hours. We use powerful extraction equipment to minimize drying time and ensure you can use your carpets the same day.'
+            }
+          ].map((faq, idx) => (
+            <div key={idx} className="border-b border-gray-200 pb-6 last:border-0">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {faq.question}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                {faq.answer}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Why Choose Section */}
-      <div className="bg-gray-50 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">
-              Professional Service
-            </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Why Choose Method Clean?
-            </p>
-          </div>
+      {/* Comprehensive Schema Markup - Organization + Service + FAQPage + Speakable + Breadcrumb */}
 
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-4">
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary-100">
-                  <svg className="h-8 w-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <dt className="mt-4 font-semibold text-gray-900">Certified Technicians</dt>
-                <dd className="mt-2 text-sm text-gray-600">
-                  Fully trained and certified cleaning professionals
-                </dd>
-              </div>
+      {/* Organization Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            'name': 'Blowup Cleaners',
+            'legalName': 'HOPOLLO LTD',
+            'url': 'https://blowupcleaners.co.uk',
+            'logo': 'https://blowupcleaners.co.uk/logo.png',
+            'foundingDate': '2020',
+            'contactPoint': {
+              '@type': 'ContactPoint',
+              'telephone': '+447405428259',
+              'contactType': 'customer service',
+              'areaServed': 'GB',
+              'availableLanguage': 'English'
+            },
+            'sameAs': [
+              'https://www.facebook.com/blowupcleaners',
+              'https://www.google.com/maps/place/Blowup+Cleaners'
+            ]
+          })
+        }}
+      />
 
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-success-100">
-                  <svg className="h-8 w-8 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <dt className="mt-4 font-semibold text-gray-900">Eco-Friendly</dt>
-                <dd className="mt-2 text-sm text-gray-600">
-                  Safe, non-toxic cleaning products
-                </dd>
-              </div>
+      {/* LocalBusiness + Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            'name': 'Blowup Cleaners',
+            'legalName': 'HOPOLLO LTD',
+            'image': 'https://blowupcleaners.co.uk/logo.png',
+            'telephone': '+447405428259',
+            'email': 'info@blowupcleaners.co.uk',
+            'priceRange': '£25-£150',
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': '230 Sealand Road',
+              'addressLocality': 'Chester',
+              'addressRegion': 'Cheshire',
+              'postalCode': 'CH1 4LH',
+              'addressCountry': 'GB'
+            },
+            'geo': {
+              '@type': 'GeoCoordinates',
+              'latitude': '53.1905',
+              'longitude': '-2.9582'
+            },
+            'areaServed': [
+              { '@type': 'City', 'name': 'Manchester' },
+              { '@type': 'City', 'name': 'Salford' },
+              { '@type': 'City', 'name': 'Trafford' },
+              { '@type': 'City', 'name': 'Stockport' }
+            ],
+            'aggregateRating': {
+              '@type': 'AggregateRating',
+              'ratingValue': '5',
+              'reviewCount': '127',
+              'bestRating': '5',
+              'worstRating': '1'
+            },
+            'hasOfferCatalog': {
+              '@type': 'OfferCatalog',
+              'name': 'Cleaning Services',
+              'itemListElement': [
+                {
+                  '@type': 'Offer',
+                  'itemOffered': {
+                    '@type': 'Service',
+                    'name': 'Carpet Cleaning Manchester',
+                    'description': 'Professional carpet cleaning services in Manchester from £25 per room'
+                  }
+                },
+                {
+                  '@type': 'Offer',
+                  'itemOffered': {
+                    '@type': 'Service',
+                    'name': 'Upholstery Cleaning Manchester',
+                    'description': 'Expert upholstery and sofa cleaning services in Manchester from £40'
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
 
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
-                  <svg className="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <dt className="mt-4 font-semibold text-gray-900">Same Day Service</dt>
-                <dd className="mt-2 text-sm text-gray-600">
-                  Available for urgent cleaning needs
-                </dd>
-              </div>
+      {/* FAQPage Schema for AI Overviews */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            'mainEntity': [
+              {
+                '@type': 'Question',
+                'name': 'How much does carpet cleaning cost in Manchester?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'Professional carpet cleaning in Manchester starts from £25 per room. The final cost depends on the carpet size, condition, and type of cleaning required. We offer free quotes with transparent pricing.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'Do you offer same-day cleaning services in Manchester?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'Yes, we provide same-day carpet and upholstery cleaning services across Manchester, Salford, and Trafford, subject to availability. Call 07405 428259 to book urgent cleaning.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'What areas in Manchester do you cover?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'We serve all areas across Greater Manchester including Manchester city centre, Salford, Trafford, Stockport, and surrounding postcodes within our 100-mile service radius.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'Are your cleaning products eco-friendly?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'Yes, all our cleaning products are eco-friendly, non-toxic, and safe for children and pets. We use professional-grade green cleaning solutions approved by industry standards.'
+                }
+              },
+              {
+                '@type': 'Question',
+                'name': 'How long does carpet cleaning take to dry?',
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': 'With our professional steam extraction method, carpets typically dry within 2-4 hours. We use powerful extraction equipment to minimize drying time.'
+                }
+              }
+            ]
+          })
+        }}
+      />
 
-              <div className="flex flex-col items-center text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                  <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <dt className="mt-4 font-semibold text-gray-900">100% Guarantee</dt>
-                <dd className="mt-2 text-sm text-gray-600">
-                  Satisfaction guaranteed or re-clean free
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
+      {/* Speakable Schema for Voice Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            'name': 'Cleaning Services Manchester',
+            'description': 'Professional carpet cleaning and upholstery cleaning services in Manchester. Same-day availability from £25. Call 07405 428259.',
+            'speakable': {
+              '@type': 'SpeakableSpecification',
+              'cssSelector': ['.speakable-headline', '.speakable-tldr', '.speakable-pricing', '.speakable-cta']
+            }
+          })
+        }}
+      />
 
-      {/* CTA Section */}
-      <div className="bg-primary-600 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to Get Started?
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-primary-100">
-              Get your free instant quote today. No obligation, transparent pricing, professional
-              service guaranteed.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="/quote">
-                <Button size="lg" variant="success">
-                  Get Instant Quote
-                </Button>
-              </Link>
-              <a href="tel:07405428259" className="text-sm font-semibold leading-6 text-white">
-                Or call us: 07405 428259
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+              {
+                '@type': 'ListItem',
+                'position': 1,
+                'name': 'Home',
+                'item': 'https://blowupcleaners.co.uk'
+              },
+              {
+                '@type': 'ListItem',
+                'position': 2,
+                'name': 'Services',
+                'item': 'https://blowupcleaners.co.uk/services'
+              }
+            ]
+          })
+        }}
+      />
     </div>
   )
 }

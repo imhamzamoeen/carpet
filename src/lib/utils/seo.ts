@@ -10,7 +10,7 @@ import type { Metadata } from 'next'
  * Base site configuration
  */
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_BUSINESS_NAME || 'Method Clean',
+  name: process.env.NEXT_PUBLIC_BUSINESS_NAME || 'Blowup Cleaners',
   description: 'Professional carpet cleaning services in Manchester and surrounding areas. Expert cleaning for carpets, rugs, upholstery, and more.',
   url: process.env.NEXT_PUBLIC_BASE_URL || 'https://methodclean.co.uk',
   ogImage: '/images/og-image.jpg',

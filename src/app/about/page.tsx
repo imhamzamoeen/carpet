@@ -10,13 +10,13 @@ import { Button, Card, CardContent } from '@/components/ui'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | Method Clean - Professional Carpet Cleaning Manchester',
+  title: 'About Us | Blowup Cleaners - Professional Carpet Cleaning Manchester',
   description:
-    'Learn about Method Clean, Manchester\'s trusted carpet and upholstery cleaning company. Over 10 years serving local communities with eco-friendly, professional cleaning services.',
+    'Learn about Blowup Cleaners, Manchester\'s trusted carpet and upholstery cleaning company. Over 10 years serving local communities with eco-friendly, professional cleaning services.',
   keywords:
-    'about Method Clean, carpet cleaning Manchester company, professional cleaners, eco-friendly cleaning, family business Manchester',
+    'about Blowup Cleaners, carpet cleaning Manchester company, professional cleaners, eco-friendly cleaning, family business Manchester',
   openGraph: {
-    title: 'About Method Clean',
+    title: 'About Blowup Cleaners',
     description: 'Manchester\'s trusted carpet and upholstery cleaning experts since 2014',
     type: 'website'
   }
@@ -120,7 +120,7 @@ const timeline = [
     year: '2014',
     title: 'Founded',
     description:
-      'Method Clean was established with a simple mission: provide honest, high-quality carpet cleaning services to Manchester residents.'
+      'Blowup Cleaners was established with a simple mission: provide honest, high-quality carpet cleaning services to Manchester residents.'
   },
   {
     year: '2016',
@@ -171,7 +171,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              About Method Clean
+              About Blowup Cleaners
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-100">
               Manchester's trusted carpet and upholstery cleaning experts since 2014. We're
@@ -189,7 +189,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
             <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Method Clean was born out of frustration with the carpet cleaning industry. Our
+                Blowup Cleaners was born out of frustration with the carpet cleaning industry. Our
                 founder, having experienced poor service, hidden fees, and ineffective cleaning from
                 several companies, decided there had to be a better way.
               </p>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 certified cleaning professionals, but our core values remain unchanged.
               </p>
               <p>
-                Today, Method Clean is proud to be one of Manchester's most trusted carpet and
+                Today, Blowup Cleaners is proud to be one of Manchester's most trusted carpet and
                 upholstery cleaning companies. We continue to invest in the latest technology,
                 training, and eco-friendly practices to ensure we deliver the best possible results
                 for our customers.
@@ -387,7 +387,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Experience the Method Clean Difference
+            Experience the Blowup Cleaners Difference
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
             Join over 1,000 satisfied customers who trust us with their carpet and upholstery

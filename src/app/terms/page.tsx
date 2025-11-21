@@ -8,8 +8,8 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Method Clean',
-  description: 'Method Clean terms and conditions for carpet and upholstery cleaning services.',
+  title: 'Terms & Conditions | Blowup Cleaners',
+  description: 'Blowup Cleaners terms and conditions for carpet and upholstery cleaning services.',
   robots: 'noindex, nofollow'
 }
 
@@ -23,14 +23,14 @@ export default function TermsPage() {
         <div className="prose prose-lg mt-8 max-w-none">
           <h2 className="text-2xl font-bold text-gray-900 mt-8">1. Agreement to Terms</h2>
           <p className="text-gray-700">
-            By using Method Clean's services or website, you agree to be bound by these Terms and
+            By using Blowup Cleaners's services or website, you agree to be bound by these Terms and
             Conditions. If you do not agree to these terms, please do not use our services.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8">2. Services</h2>
           <h3 className="text-xl font-semibold text-gray-900 mt-6">2.1 Service Description</h3>
           <p className="text-gray-700">
-            Method Clean provides professional carpet, upholstery, and rug cleaning services for
+            Blowup Cleaners provides professional carpet, upholstery, and rug cleaning services for
             residential and commercial properties in Manchester and surrounding areas.
           </p>
 
@@ -201,7 +201,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-bold text-gray-900 mt-8">11. Intellectual Property</h2>
           <p className="text-gray-700">
             All content on our website, including text, graphics, logos, and images, is the property
-            of Method Clean and protected by copyright law. You may not reproduce, distribute, or
+            of Blowup Cleaners and protected by copyright law. You may not reproduce, distribute, or
             use this content without our written permission.
           </p>
 
@@ -235,7 +235,7 @@ export default function TermsPage() {
           </p>
           <div className="mt-4 rounded-lg bg-gray-50 p-6">
             <p className="text-gray-700">
-              <strong>Method Clean</strong>
+              <strong>Blowup Cleaners</strong>
               <br />
               Email:{' '}
               <a

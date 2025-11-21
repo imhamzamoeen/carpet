@@ -51,7 +51,7 @@ export function Footer() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600">
                 <span className="text-xl font-bold text-white">MC</span>
               </div>
-              <span className="text-xl font-bold text-white">Method Clean</span>
+              <span className="text-xl font-bold text-white">Blowup Cleaners</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Professional carpet and upholstery cleaning services in Manchester and surrounding
@@ -189,7 +189,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-8 border-t border-gray-700 pt-8">
           <p className="text-xs leading-5 text-gray-400">
-            &copy; {currentYear} Method Clean. All rights reserved. Professional carpet cleaning
+            &copy; {currentYear} Blowup Cleaners. All rights reserved. Professional carpet cleaning
             services in Manchester.
           </p>
         </div>
