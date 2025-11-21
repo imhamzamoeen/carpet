@@ -1,10 +1,19 @@
-import { faqs } from '@/data/faqs';
+import { faqs as defaultFaqs } from '@/data/faqs';
 
-export function FAQSchema() {
+interface FAQSchemaProps {
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+export function FAQSchema({ faqs }: FAQSchemaProps = {}) {
+  const faqData = faqs || defaultFaqs;
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: faqData.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {

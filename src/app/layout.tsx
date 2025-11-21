@@ -18,10 +18,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://freshfibercleaning.co.uk'),
+  metadataBase: new URL('https://blowupcleaners.co.uk'),
   title: {
-    default: 'Fresh Fiber Carpet Cleaning',
-    template: '%s | Fresh Fiber Carpet Cleaning'
+    default: 'Blowup Cleaners',
+    template: '%s | Blowup Cleaners'
   },
   description: 'Professional carpet cleaning services in Manchester and Greater Manchester.',
   robots: {

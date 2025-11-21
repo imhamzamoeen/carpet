@@ -99,13 +99,13 @@ export function WhyChooseUs() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-600">Why Choose Us</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary-600">Why Choose Blowup Cleaners</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            The Method Clean Difference
+            Manchester's Trusted Professional Cleaners
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            We're not just another cleaning company. Here's what makes us the preferred choice for
-            carpet and upholstery cleaning in Manchester.
+            As experienced cleaners in Manchester, we've built our reputation on quality, reliability, and customer satisfaction.
+            Here's what makes us the preferred choice for cleaning services across Manchester and surrounding areas.
           </p>
         </div>
 

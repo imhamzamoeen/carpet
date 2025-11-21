@@ -14,13 +14,13 @@ export function CTASection() {
       <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready for a Cleaner Home?
+            Looking for Professional Cleaners in Manchester?
             <br />
-            Get your free quote today.
+            Get your free quote in 60 seconds.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-primary-100">
-            Join hundreds of satisfied customers in Manchester and surrounding areas. Professional
-            cleaning service with instant online quotes.
+            Join hundreds of satisfied customers across Manchester. As trusted cleaners in Manchester, we offer
+            carpet, upholstery, and deep cleaning services with same-day availability.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
             <Link href="/quote">

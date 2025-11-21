@@ -816,6 +816,202 @@ export const services: Record<string, Service> = {
       'retail carpet cleaning',
       'commercial cleaning services'
     ]
+  },
+  'leather-cleaning': {
+    slug: 'leather-cleaning',
+    name: 'Leather Cleaning',
+    shortDescription: 'Gentle care and conditioning for leather furniture',
+    fullDescription:
+      'Professional leather cleaning and conditioning service for all types of leather furniture including sofas, chairs, car interiors, and more. Our specialized leather care products clean, condition, and protect your leather, restoring its natural beauty and extending its lifespan. We understand the unique needs of different leather types and use pH-balanced, leather-safe products.',
+    features: [
+      'All leather types and colors',
+      'Cleaning and conditioning',
+      'Stain and mark removal',
+      'Color restoration services',
+      'Protective coating application',
+      'Scratch and scuff treatment',
+      'Safe for all leather grades',
+      'UV protection available'
+    ],
+    benefits: [
+      'Restores natural luster',
+      'Prevents cracking and drying',
+      'Extends leather lifespan',
+      'Removes stubborn stains',
+      'Protects against future damage',
+      'Maintains leather softness'
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Leather Assessment',
+        description:
+          'We identify your leather type (aniline, semi-aniline, pigmented) and test products in an inconspicuous area to ensure color safety and compatibility.'
+      },
+      {
+        step: 2,
+        title: 'Cleaning',
+        description:
+          'Using pH-balanced leather cleaners, we gently remove dirt, oils, and stains from the leather surface without damaging the protective finish.'
+      },
+      {
+        step: 3,
+        title: 'Conditioning',
+        description:
+          'Professional leather conditioners are massaged into the leather to restore moisture, prevent cracking, and maintain suppleness.'
+      },
+      {
+        step: 4,
+        title: 'Protection',
+        description:
+          'Optional protective coating is applied to guard against spills, stains, and UV damage. The leather is buffed to restore its natural sheen.'
+      }
+    ],
+    pricing: {
+      from: '£35 per item',
+      details: [
+        { item: 'Leather armchair', price: '£35' },
+        { item: 'Leather 2-seater sofa', price: '£65' },
+        { item: 'Leather 3-seater sofa', price: '£85' },
+        { item: 'Leather corner sofa (per section)', price: '£55' },
+        { item: 'Car leather seats (full interior)', price: '£120' },
+        { item: 'Color restoration', price: '+£30' },
+        { item: 'UV protection coating', price: '+£20' }
+      ]
+    },
+    faqs: [
+      {
+        question: 'Can you clean all types of leather?',
+        answer:
+          'Yes, we work with all leather types including aniline, semi-aniline, pigmented, nubuck, and suede. Each type requires different care, and we use appropriate products for your specific leather.'
+      },
+      {
+        question: 'How often should leather be cleaned and conditioned?',
+        answer:
+          'We recommend professional leather cleaning and conditioning every 12-18 months for most furniture, or every 6-12 months for high-use items like car interiors.'
+      },
+      {
+        question: 'Will cleaning damage the leather?',
+        answer:
+          'No. We use pH-balanced, leather-safe products specifically formulated for leather care. We always test in an inconspicuous area first to ensure compatibility.'
+      },
+      {
+        question: 'Can you remove scratches and scuffs?',
+        answer:
+          'We can reduce the appearance of minor scratches and scuffs through conditioning and buffing. Deep gouges may require color restoration services, which we also offer.'
+      },
+      {
+        question: 'What about color fading?',
+        answer:
+          'We offer color restoration services for faded or worn leather. This process can dramatically improve the appearance of older leather furniture and is more cost-effective than replacement.'
+      }
+    ],
+    seoKeywords: [
+      'leather cleaning Manchester',
+      'leather sofa cleaning',
+      'leather furniture cleaning',
+      'leather conditioning',
+      'leather restoration',
+      'professional leather cleaning'
+    ]
+  },
+  'car-valeting': {
+    slug: 'car-valeting',
+    name: 'Car Valeting',
+    shortDescription: 'Interior deep cleaning and detailing for vehicles',
+    fullDescription:
+      'Professional car interior cleaning and valeting service covering seats, carpets, mats, dashboard, and all interior surfaces. We remove dirt, stains, odors, and allergens from your vehicle using specialized automotive cleaning products and equipment. Whether you need a one-time deep clean or regular maintenance, we restore your car interior to showroom condition.',
+    features: [
+      'Full interior deep clean',
+      'Carpet and seat cleaning',
+      'Leather seat conditioning',
+      'Dashboard and trim cleaning',
+      'Odor removal treatment',
+      'Pet hair removal',
+      'Stain removal',
+      'Protective coating available'
+    ],
+    benefits: [
+      'Improves resale value',
+      'Removes stubborn odors',
+      'Healthier cabin environment',
+      'Showroom-fresh appearance',
+      'Protects interior surfaces',
+      'Professional finish'
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Interior Inspection',
+        description:
+          'We assess the condition of your car interior, identifying problem areas, stains, and the level of cleaning required for carpets, seats, and surfaces.'
+      },
+      {
+        step: 2,
+        title: 'Vacuuming & Pre-Treatment',
+        description:
+          'Thorough vacuuming removes loose dirt and debris. Carpets, mats, and seats are pre-treated with appropriate cleaners to break down stains and embedded dirt.'
+      },
+      {
+        step: 3,
+        title: 'Deep Cleaning',
+        description:
+          'Using hot water extraction for carpets and fabric seats, or specialized leather cleaning for leather interiors. All surfaces including dashboard, door panels, and center console are cleaned.'
+      },
+      {
+        step: 4,
+        title: 'Finishing & Protection',
+        description:
+          'Interiors are dried using high-velocity fans. Leather is conditioned, plastics are treated with protectant, and optional odor treatment or fabric protection is applied.'
+      }
+    ],
+    pricing: {
+      from: '£50 per vehicle',
+      details: [
+        { item: 'Small car (hatchback)', price: '£50' },
+        { item: 'Medium car (sedan)', price: '£65' },
+        { item: 'Large car (SUV/estate)', price: '£80' },
+        { item: '7-seater vehicle', price: '£95' },
+        { item: 'Leather conditioning', price: '+£25' },
+        { item: 'Odor removal treatment', price: '+£20' },
+        { item: 'Fabric protection coating', price: '+£30' }
+      ]
+    },
+    faqs: [
+      {
+        question: 'How long does car valeting take?',
+        answer:
+          'Most car interiors take 2-3 hours for a thorough deep clean, depending on the size of the vehicle and its condition. Larger vehicles or those requiring extensive stain removal may take longer.'
+      },
+      {
+        question: 'Do you clean leather car seats?',
+        answer:
+          'Yes! We specialize in leather seat cleaning and conditioning. We use automotive-grade leather products that clean, condition, and protect leather seats, keeping them soft and preventing cracking.'
+      },
+      {
+        question: 'Can you remove pet odors and hair?',
+        answer:
+          'Absolutely. We use specialized tools to remove pet hair from carpets and seats, and enzyme-based treatments to eliminate pet odors at the source, not just mask them.'
+      },
+      {
+        question: 'How long until the car is dry?',
+        answer:
+          'With our powerful extraction equipment and fans, most car interiors are dry within 2-3 hours. You can typically use your car the same day.'
+      },
+      {
+        question: 'Do you come to my location?',
+        answer:
+          'Yes! We offer mobile car valeting services. We come to your home or workplace with all the necessary equipment and clean your car on-site for your convenience.'
+      }
+    ],
+    seoKeywords: [
+      'car valeting Manchester',
+      'car interior cleaning',
+      'car carpet cleaning',
+      'car seat cleaning',
+      'mobile car valeting',
+      'professional car cleaning'
+    ]
   }
 }
 

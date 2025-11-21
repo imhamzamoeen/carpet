@@ -5,7 +5,7 @@ export function ServiceSchema() {
       serviceType: 'Carpet Cleaning',
       provider: {
         '@type': 'LocalBusiness',
-        name: 'Fresh Fiber Carpet Cleaning',
+        name: 'Blowup Cleaners',
       },
       areaServed: {
         '@type': 'City',

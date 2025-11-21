@@ -331,8 +331,8 @@ export function QuoteForm() {
         {/* Help Text */}
         <div className="mt-6 text-center text-sm text-gray-600">
           Need help? Call us at{' '}
-          <a href="tel:01234567890" className="font-medium text-primary-600 hover:text-primary-700">
-            0123 456 7890
+          <a href="tel:07405428259" className="font-medium text-primary-600 hover:text-primary-700">
+            07405 428259
           </a>{' '}
           or email{' '}
           <a

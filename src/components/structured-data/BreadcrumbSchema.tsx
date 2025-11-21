@@ -13,7 +13,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://freshfibercleaning.co.uk${item.url}`,
+      item: `https://blowupcleaners.co.uk${item.url}`,
     })),
   };
 

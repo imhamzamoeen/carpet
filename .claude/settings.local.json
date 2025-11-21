@@ -29,7 +29,16 @@
       "Bash(timeout /t 5 /nobreak)",
       "Bash(cat:*)",
       "Bash(\"c:\\laragon\\www\\Carpet\\.claude\\Todo\\planner_backup.md\")",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(findstr:*)",
+      "Bash(more:*)",
+      "Bash(mkdir:*)",
+      "Bash(del /F /Q \"c:\\laragon\\www\\Carpet\\.next\\lock\" 2)",
+      "Bash(move:*)",
+      "Bash(ren \"c:\\laragon\\www\\Carpet\\src\\middleware.ts\" \"proxy.ts\")",
+      "Bash(del \"c:\\laragon\\www\\Carpet\\src\\middleware.ts\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path src -Recurse -Include *.tsx,*.ts,*.json | ForEach-Object { (Get-Content $_FullName -Raw) -replace ''0123 456 7890'', ''07405 428259'' | Set-Content $_FullName -NoNewline }\")"
     ],
     "deny": [],
     "ask": []

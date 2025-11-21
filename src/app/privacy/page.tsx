@@ -228,8 +228,8 @@ export default function PrivacyPage() {
               </a>
               <br />
               Phone:{' '}
-              <a href="tel:01234567890" className="text-primary-600 hover:underline">
-                0123 456 7890
+              <a href="tel:07405428259" className="text-primary-600 hover:underline">
+                07405 428259
               </a>
               <br />
               Address: Manchester, United Kingdom

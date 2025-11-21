@@ -9,10 +9,10 @@ export function LocalBusinessSchema({ aggregateRating }: LocalBusinessSchemaProp
   const schema = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
-    name: 'Fresh Fiber Carpet Cleaning',
-    image: 'https://freshfibercleaning.co.uk/logo.jpg',
-    '@id': 'https://freshfibercleaning.co.uk',
-    url: 'https://freshfibercleaning.co.uk',
+    name: 'Blowup Cleaners',
+    image: 'https://blowupcleaners.co.uk/logo.jpg',
+    '@id': 'https://blowupcleaners.co.uk',
+    url: 'https://blowupcleaners.co.uk',
     telephone: '+44-161-XXX-XXXX',
     priceRange: '££',
     address: {

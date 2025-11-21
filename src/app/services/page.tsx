@@ -420,8 +420,8 @@ export default function ServicesPage() {
                   Get Instant Quote
                 </Button>
               </Link>
-              <a href="tel:01234567890" className="text-sm font-semibold leading-6 text-white">
-                Or call us: 0123 456 7890
+              <a href="tel:07405428259" className="text-sm font-semibold leading-6 text-white">
+                Or call us: 07405 428259
               </a>
             </div>
           </div>

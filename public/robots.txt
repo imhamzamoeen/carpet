@@ -1,4 +1,4 @@
-# robots.txt for Fresh Fiber Carpet Cleaning Manchester
+# robots.txt for Blowup Cleaners Manchester
 # Optimized for search engine crawling and AI-powered search (GPTBot, Bingbot)
 
 User-agent: *
@@ -19,4 +19,4 @@ User-agent: GPTBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://freshfibercleaning.co.uk/sitemap.xml
+Sitemap: https://blowupcleaners.co.uk/sitemap.xml

@@ -2,9 +2,9 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Fresh Fiber Carpet Cleaning',
-    url: 'https://freshfibercleaning.co.uk',
-    logo: 'https://freshfibercleaning.co.uk/logo.jpg',
+    name: 'Blowup Cleaners',
+    url: 'https://blowupcleaners.co.uk',
+    logo: 'https://blowupcleaners.co.uk/logo.jpg',
     description: 'Professional carpet cleaning services in Manchester and Greater Manchester',
     address: {
       '@type': 'PostalAddress',
@@ -23,13 +23,13 @@ export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Fresh Fiber Carpet Cleaning',
-    url: 'https://freshfibercleaning.co.uk',
+    name: 'Blowup Cleaners',
+    url: 'https://blowupcleaners.co.uk',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://freshfibercleaning.co.uk/search?q={search_term_string}',
+        urlTemplate: 'https://blowupcleaners.co.uk/search?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },

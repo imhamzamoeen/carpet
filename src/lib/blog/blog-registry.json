@@ -1,0 +1,601 @@
+{
+  "meta": {
+    "totalPosts": 2,
+    "lastUpdated": "2025-01-21T15:30:00.000Z",
+    "version": "1.0.0",
+    "description": "Blog registry for Blowup Cleaners - stores all blog metadata for fast display on listing pages and landing pages"
+  },
+  "blogs": [
+    {
+      "id": "professional-carpet-cleaning-remove-pet-urine-smell",
+      "slug": "professional-carpet-cleaning-remove-pet-urine-smell",
+      "title": "Can Professional Carpet Cleaning Remove Pet Urine Smell? Expert Guide 2025",
+      "excerpt": "YES! Professional carpet cleaning CAN remove pet urine smell permanently. Learn the science behind professional pet odor removal and our proven 5-step treatment process.",
+      "description": "Complete expert guide on professional pet urine odor removal from carpets. Learn why DIY methods fail, the science behind enzyme treatments, our 5-step professional process, types of pet accidents we can remove, and real customer success stories. 90-95% success rate for complete odor elimination.",
+      "author": {
+        "name": "John Smith",
+        "title": "Carpet Cleaning Expert",
+        "image": "/images/team/expert-placeholder.jpg",
+        "bio": "15+ years carpet cleaning experience • 5,000+ satisfied customers • NCCA Certified",
+        "expertise": ["Carpet Cleaning", "Pet Odor Removal", "Enzyme Treatment", "Stain Removal"]
+      },
+      "publishedAt": "2025-01-21T15:30:00.000Z",
+      "updatedAt": "2025-01-21T15:30:00.000Z",
+      "image": {
+        "url": "/images/blog/pet-urine-removal-hero.jpg",
+        "alt": "Professional carpet cleaner using UV light to detect and remove pet urine stains and odors",
+        "width": 1200,
+        "height": 630
+      },
+      "readingTime": 12,
+      "wordCount": 2600,
+      "featured": true,
+      "categories": [
+        "Pet Care",
+        "Carpet Cleaning",
+        "Odor Removal"
+      ],
+      "tags": [
+        "pet urine smell removal",
+        "carpet cleaning pet odor",
+        "remove pet urine from carpet",
+        "professional pet odor removal",
+        "cat urine smell removal",
+        "dog urine smell removal",
+        "enzyme treatment",
+        "UV blacklight detection"
+      ],
+      "keywords": [
+        "can professional carpet cleaning remove pet urine smell",
+        "pet urine smell removal",
+        "carpet cleaning pet odor",
+        "remove pet urine from carpet",
+        "professional pet odor removal Manchester",
+        "cat urine smell removal",
+        "dog urine smell removal carpet",
+        "pet stain and odor removal"
+      ],
+      "seo": {
+        "metaTitle": "Can Professional Carpet Cleaning Remove Pet Urine Smell? Expert Guide 2025 | Blowup Cleaners",
+        "metaDescription": "YES! Professional carpet cleaning CAN remove pet urine smell permanently. Learn the science behind professional pet odor removal, our 5-step treatment process, and why DIY methods fail. Free quote in 60 seconds.",
+        "canonicalUrl": "https://blowupcleaners.co.uk/blog/professional-carpet-cleaning-remove-pet-urine-smell",
+        "focusKeyword": "can professional carpet cleaning remove pet urine smell",
+        "ogType": "article",
+        "twitterCard": "summary_large_image"
+      },
+      "structure": {
+        "sections": [
+          {
+            "id": "quick-answer",
+            "title": "Quick Answer: Yes, It Can Remove Pet Urine Smell",
+            "order": 1
+          },
+          {
+            "id": "why-difficult",
+            "title": "Why Pet Urine Smell is So Difficult to Remove",
+            "order": 2
+          },
+          {
+            "id": "science",
+            "title": "The Science Behind Professional Pet Odor Removal",
+            "order": 3
+          },
+          {
+            "id": "professional-vs-diy",
+            "title": "Professional vs DIY Pet Urine Removal Methods",
+            "order": 4
+          },
+          {
+            "id": "5-step-process",
+            "title": "Our 5-Step Professional Pet Urine Treatment Process",
+            "order": 5
+          },
+          {
+            "id": "types-of-accidents",
+            "title": "What Types of Pet Accidents Can Be Removed?",
+            "order": 6
+          },
+          {
+            "id": "timeline",
+            "title": "How Long Does Pet Odor Removal Take?",
+            "order": 7
+          },
+          {
+            "id": "prevention",
+            "title": "Preventing Future Pet Accidents and Odors",
+            "order": 8
+          },
+          {
+            "id": "success-stories",
+            "title": "Real Results: Customer Success Stories",
+            "order": 9
+          },
+          {
+            "id": "faq",
+            "title": "Frequently Asked Questions",
+            "order": 10
+          }
+        ],
+        "faqCount": 8,
+        "testimonialCount": 2,
+        "ctaCount": 6
+      },
+      "pricing": {
+        "featured": {
+          "perSpot": {
+            "min": 15,
+            "max": 35,
+            "unit": "per spot",
+            "currency": "GBP"
+          },
+          "wholeRoom": {
+            "min": 75,
+            "max": 150,
+            "unit": "per room",
+            "currency": "GBP"
+          }
+        }
+      },
+      "locations": {
+        "primary": "Manchester",
+        "serviceRadius": "100 miles",
+        "regionalData": []
+      },
+      "testimonials": [
+        {
+          "name": "Lisa Patterson",
+          "location": "Didsbury, Manchester",
+          "service": "Pet Urine Odor Removal - 3 Rooms",
+          "rating": 5,
+          "quote": "We adopted a rescue dog and discovered the previous owner had multiple accidents throughout the house. The smell was unbearable! Blowup Cleaners used UV light to find spots we couldn't even see and their enzyme treatment completely eliminated the odor. Three months later and still no smell - it's like magic!",
+          "gradient": "from-pink-400 to-rose-500",
+          "initial": "L"
+        },
+        {
+          "name": "David Kumar",
+          "location": "Chorlton, Manchester",
+          "service": "Cat Urine Treatment - Entire Flat",
+          "rating": 5,
+          "quote": "My elderly cat had been having accidents for over a year before we caught on. The ammonia smell was so strong we were embarrassed to have guests. I'd tried every product from the supermarket with no luck. Blowup's professional treatment was worth every penny - the smell is 100% gone and hasn't come back. Highly recommend for pet owners!",
+          "gradient": "from-blue-400 to-indigo-500",
+          "initial": "D"
+        }
+      ],
+      "relatedPosts": ["professional-carpet-cleaning-cost-uk"],
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Get Pet Odor Removal Quote",
+          "link": "/quote",
+          "icon": "Calculator"
+        },
+        {
+          "type": "secondary",
+          "text": "Call for Emergency Service",
+          "link": "tel:+441234567890",
+          "icon": "Phone"
+        }
+      ],
+      "schema": {
+        "hasArticle": true,
+        "hasFAQ": true,
+        "hasBreadcrumb": true,
+        "hasLocalBusiness": true
+      },
+      "engagement": {
+        "estimatedScrollProgress": true,
+        "interactiveTOC": true,
+        "floatingCTAs": true,
+        "readingProgressBar": true
+      },
+      "performance": {
+        "serverComponent": true,
+        "clientComponents": ["ClientWrapper", "SidebarClient"],
+        "imageOptimization": true,
+        "lazyLoading": true
+      }
+    },
+    {
+      "id": "professional-carpet-cleaning-cost-uk",
+      "slug": "professional-carpet-cleaning-cost-uk",
+      "title": "How Much Does Professional Carpet Cleaning Cost in the UK?",
+      "excerpt": "Comprehensive UK carpet cleaning price guide for 2025. Discover room-based pricing (£25-£35/room), square metre rates, whole house costs, and regional variations across Manchester, London, Birmingham, and more.",
+      "description": "Complete guide to professional carpet cleaning costs in the UK for 2025. Learn about room-based pricing, square metre rates, whole house packages, commercial vs residential pricing, hidden costs, money-saving tips, and regional price variations. Includes ROI analysis comparing professional cleaning vs DIY methods.",
+      "author": {
+        "name": "John Smith",
+        "title": "Carpet Cleaning Expert",
+        "image": "/images/team/expert-placeholder.jpg",
+        "bio": "15+ years carpet cleaning experience • 5,000+ satisfied customers • NCCA Certified",
+        "expertise": ["Carpet Cleaning", "Stain Removal", "Commercial Cleaning", "Price Estimation"]
+      },
+      "publishedAt": "2025-01-19T23:10:00.000Z",
+      "updatedAt": "2025-01-19T23:10:00.000Z",
+      "image": {
+        "url": "/images/blog/carpet-cleaning-cost-hero.jpg",
+        "alt": "Professional carpet cleaner providing detailed cost estimate to homeowner",
+        "width": 1200,
+        "height": 630
+      },
+      "readingTime": 12,
+      "wordCount": 2850,
+      "featured": true,
+      "categories": [
+        "Pricing Guides",
+        "Carpet Cleaning",
+        "UK Services"
+      ],
+      "tags": [
+        "carpet cleaning prices",
+        "UK carpet cleaning cost",
+        "professional carpet cleaning",
+        "Manchester carpet cleaning",
+        "room-based pricing",
+        "square metre pricing",
+        "whole house cleaning",
+        "commercial cleaning prices",
+        "carpet cleaning tips",
+        "regional pricing variations"
+      ],
+      "keywords": [
+        "professional carpet cleaning cost UK",
+        "carpet cleaning prices Manchester",
+        "how much does carpet cleaning cost",
+        "carpet cleaning price per room UK",
+        "carpet cleaning cost per square metre",
+        "whole house carpet cleaning cost",
+        "commercial carpet cleaning prices UK",
+        "carpet cleaning hidden costs",
+        "cheap carpet cleaning UK",
+        "is professional carpet cleaning worth it"
+      ],
+      "seo": {
+        "metaTitle": "How Much Does Professional Carpet Cleaning Cost in the UK? | Blowup Cleaners Manchester",
+        "metaDescription": "Comprehensive UK carpet cleaning price guide for 2025. Room-based pricing £25-£35, square metre rates, whole house costs, and regional variations. Get instant quote.",
+        "canonicalUrl": "https://blowupcleaners.co.uk/blog/professional-carpet-cleaning-cost-uk",
+        "focusKeyword": "professional carpet cleaning cost UK",
+        "ogType": "article",
+        "twitterCard": "summary_large_image"
+      },
+      "structure": {
+        "sections": [
+          {
+            "id": "quick-answer",
+            "title": "Quick Answer: UK Costs",
+            "order": 1
+          },
+          {
+            "id": "room-based-pricing",
+            "title": "Room-Based Pricing Breakdown",
+            "order": 2
+          },
+          {
+            "id": "area-based-pricing",
+            "title": "Square Metre Pricing Explained",
+            "order": 3
+          },
+          {
+            "id": "whole-house-pricing",
+            "title": "Whole House Carpet Cleaning Costs",
+            "order": 4
+          },
+          {
+            "id": "cost-factors",
+            "title": "What Affects Carpet Cleaning Prices?",
+            "order": 5
+          },
+          {
+            "id": "stairs-pricing",
+            "title": "Stairs and Landing Costs",
+            "order": 6
+          },
+          {
+            "id": "commercial-pricing",
+            "title": "Commercial vs Residential Pricing",
+            "order": 7
+          },
+          {
+            "id": "hidden-costs",
+            "title": "Hidden Costs to Watch For",
+            "order": 8
+          },
+          {
+            "id": "money-saving-tips",
+            "title": "Money-Saving Tips for Carpet Cleaning",
+            "order": 9
+          },
+          {
+            "id": "worth-it",
+            "title": "Is Professional Carpet Cleaning Worth It?",
+            "order": 10
+          },
+          {
+            "id": "regional-pricing",
+            "title": "UK Regional Price Variations",
+            "order": 11
+          },
+          {
+            "id": "getting-quotes",
+            "title": "How to Get Accurate Quotes",
+            "order": 12
+          },
+          {
+            "id": "faq",
+            "title": "Frequently Asked Questions",
+            "order": 13
+          }
+        ],
+        "faqCount": 8,
+        "testimonialCount": 2,
+        "ctaCount": 8
+      },
+      "pricing": {
+        "featured": {
+          "roomBased": {
+            "min": 25,
+            "max": 35,
+            "unit": "per room",
+            "currency": "GBP"
+          },
+          "squareMetre": {
+            "min": 3,
+            "max": 6,
+            "unit": "per m²",
+            "currency": "GBP"
+          },
+          "wholeHouse": {
+            "oneToTwoBed": {
+              "min": 80,
+              "max": 120,
+              "currency": "GBP"
+            },
+            "threeBed": {
+              "min": 150,
+              "max": 200,
+              "currency": "GBP"
+            },
+            "fourPlusBed": {
+              "min": 200,
+              "max": 300,
+              "currency": "GBP"
+            }
+          }
+        }
+      },
+      "locations": {
+        "primary": "Manchester",
+        "serviceRadius": "100 miles",
+        "regionalData": [
+          {
+            "region": "Manchester",
+            "pricePerRoom": "£25-£35",
+            "wholeHouse3Bed": "£150-£200"
+          },
+          {
+            "region": "London",
+            "pricePerRoom": "£35-£50",
+            "wholeHouse3Bed": "£200-£280"
+          },
+          {
+            "region": "Birmingham",
+            "pricePerRoom": "£25-£40",
+            "wholeHouse3Bed": "£150-£220"
+          },
+          {
+            "region": "Leeds/Yorkshire",
+            "pricePerRoom": "£22-£32",
+            "wholeHouse3Bed": "£130-£180"
+          },
+          {
+            "region": "Scotland (Edinburgh/Glasgow)",
+            "pricePerRoom": "£28-£38",
+            "wholeHouse3Bed": "£160-£210"
+          },
+          {
+            "region": "Wales (Cardiff)",
+            "pricePerRoom": "£24-£34",
+            "wholeHouse3Bed": "£140-£190"
+          },
+          {
+            "region": "South West (Bristol)",
+            "pricePerRoom": "£26-£36",
+            "wholeHouse3Bed": "£150-£200"
+          }
+        ]
+      },
+      "testimonials": [
+        {
+          "name": "Sarah Johnson",
+          "location": "Manchester City Centre",
+          "service": "3-Bedroom Carpet Clean",
+          "rating": 5,
+          "quote": "Absolutely brilliant service! The team arrived on time, quoted exactly what they said (£175 for my 3-bed flat), and my carpets look brand new. Well worth every penny.",
+          "gradient": "from-pink-400 to-rose-500",
+          "initial": "S"
+        },
+        {
+          "name": "David Thompson",
+          "location": "Salford",
+          "service": "Whole House + Stairs",
+          "rating": 5,
+          "quote": "I was quoted £220 for my whole house plus stairs and landing. Blowup Cleaners beat two other quotes and did an exceptional job. The stains I thought were permanent are completely gone!",
+          "gradient": "from-blue-400 to-cyan-500",
+          "initial": "D"
+        }
+      ],
+      "relatedPosts": ["professional-carpet-cleaning-remove-pet-urine-smell"],
+      "ctas": [
+        {
+          "type": "primary",
+          "text": "Get Instant Quote",
+          "link": "/quote",
+          "icon": "Calculator"
+        },
+        {
+          "type": "secondary",
+          "text": "Call Us Now",
+          "link": "tel:+441234567890",
+          "icon": "Phone"
+        },
+        {
+          "type": "tertiary",
+          "text": "View All Services",
+          "link": "/services",
+          "icon": "ArrowRight"
+        }
+      ],
+      "schema": {
+        "hasArticle": true,
+        "hasFAQ": true,
+        "hasBreadcrumb": true,
+        "hasLocalBusiness": true
+      },
+      "engagement": {
+        "estimatedScrollProgress": true,
+        "interactiveTOC": true,
+        "floatingCTAs": true,
+        "readingProgressBar": true
+      },
+      "performance": {
+        "serverComponent": true,
+        "clientComponents": ["ClientWrapper", "SidebarClient"],
+        "imageOptimization": true,
+        "lazyLoading": true
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "pet-care",
+      "name": "Pet Care",
+      "slug": "pet-care",
+      "description": "Expert guides on pet-related carpet cleaning challenges and solutions",
+      "count": 1
+    },
+    {
+      "id": "odor-removal",
+      "name": "Odor Removal",
+      "slug": "odor-removal",
+      "description": "Professional techniques for removing stubborn odors from carpets",
+      "count": 1
+    },
+    {
+      "id": "pricing-guides",
+      "name": "Pricing Guides",
+      "slug": "pricing-guides",
+      "description": "Comprehensive pricing information for all our carpet cleaning services",
+      "count": 1
+    },
+    {
+      "id": "carpet-cleaning",
+      "name": "Carpet Cleaning",
+      "slug": "carpet-cleaning",
+      "description": "Expert tips, guides, and insights about professional carpet cleaning",
+      "count": 2
+    },
+    {
+      "id": "uk-services",
+      "name": "UK Services",
+      "slug": "uk-services",
+      "description": "Information specific to our UK carpet cleaning services",
+      "count": 1
+    }
+  ],
+  "tags": [
+    {
+      "id": "pet-urine-smell-removal",
+      "name": "Pet Urine Smell Removal",
+      "slug": "pet-urine-smell-removal",
+      "count": 1
+    },
+    {
+      "id": "carpet-cleaning-pet-odor",
+      "name": "Carpet Cleaning Pet Odor",
+      "slug": "carpet-cleaning-pet-odor",
+      "count": 1
+    },
+    {
+      "id": "enzyme-treatment",
+      "name": "Enzyme Treatment",
+      "slug": "enzyme-treatment",
+      "count": 1
+    },
+    {
+      "id": "uv-blacklight-detection",
+      "name": "UV Blacklight Detection",
+      "slug": "uv-blacklight-detection",
+      "count": 1
+    },
+    {
+      "id": "carpet-cleaning-prices",
+      "name": "Carpet Cleaning Prices",
+      "slug": "carpet-cleaning-prices",
+      "count": 1
+    },
+    {
+      "id": "uk-carpet-cleaning-cost",
+      "name": "UK Carpet Cleaning Cost",
+      "slug": "uk-carpet-cleaning-cost",
+      "count": 1
+    },
+    {
+      "id": "professional-carpet-cleaning",
+      "name": "Professional Carpet Cleaning",
+      "slug": "professional-carpet-cleaning",
+      "count": 2
+    },
+    {
+      "id": "manchester-carpet-cleaning",
+      "name": "Manchester Carpet Cleaning",
+      "slug": "manchester-carpet-cleaning",
+      "count": 1
+    },
+    {
+      "id": "room-based-pricing",
+      "name": "Room-Based Pricing",
+      "slug": "room-based-pricing",
+      "count": 1
+    },
+    {
+      "id": "square-metre-pricing",
+      "name": "Square Metre Pricing",
+      "slug": "square-metre-pricing",
+      "count": 1
+    },
+    {
+      "id": "whole-house-cleaning",
+      "name": "Whole House Cleaning",
+      "slug": "whole-house-cleaning",
+      "count": 1
+    },
+    {
+      "id": "commercial-cleaning-prices",
+      "name": "Commercial Cleaning Prices",
+      "slug": "commercial-cleaning-prices",
+      "count": 1
+    },
+    {
+      "id": "carpet-cleaning-tips",
+      "name": "Carpet Cleaning Tips",
+      "slug": "carpet-cleaning-tips",
+      "count": 1
+    },
+    {
+      "id": "regional-pricing-variations",
+      "name": "Regional Pricing Variations",
+      "slug": "regional-pricing-variations",
+      "count": 1
+    }
+  ],
+  "authors": [
+    {
+      "id": "john-smith",
+      "name": "John Smith",
+      "slug": "john-smith",
+      "title": "Carpet Cleaning Expert",
+      "bio": "15+ years carpet cleaning experience • 5,000+ satisfied customers • NCCA Certified",
+      "image": "/images/team/expert-placeholder.jpg",
+      "expertise": ["Carpet Cleaning", "Stain Removal", "Commercial Cleaning", "Price Estimation", "Pet Odor Removal", "Enzyme Treatment"],
+      "postCount": 2
+    }
+  ]
+}

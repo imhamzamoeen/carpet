@@ -39,13 +39,13 @@ export function Hero() {
             {/* Big Bold Headline with Accent Words */}
             <h1 className="font-grotesk font-bold leading-tight text-balance">
               <span className="block text-text-primary">Professional</span>
-              <span className="block text-primary-600">Carpet Cleaning</span>
-              <span className="block text-text-primary">in Manchester</span>
+              <span className="block text-primary-600">Cleaners in Manchester</span>
+              <span className="block text-text-primary">Carpet, Upholstery & Deep Cleaning</span>
             </h1>
 
             {/* Small Paragraph */}
             <p className="text-lg text-text-secondary max-w-xl leading-relaxed">
-              Experience deep, eco-friendly carpet cleaning that restores your home's freshness.
+              Looking for reliable cleaners in Manchester? We offer professional carpet, upholstery, rug, and deep cleaning services for homes and businesses.
               Get an instant quote in 60 seconds and enjoy same-day service with our 100% satisfaction guarantee.
             </p>
 
@@ -114,7 +114,7 @@ export function Hero() {
               <div className="relative overflow-hidden rounded-image shadow-card-hover">
                 <Image
                   src="/images/hero-carpet-1.jpg"
-                  alt="Professional carpet cleaning service in Manchester"
+                  alt="Professional cleaners in Manchester - carpet, upholstery and deep cleaning services"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"

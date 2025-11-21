@@ -122,7 +122,7 @@ export default function ContactPage() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                placeholder="0123 456 7890"
+                placeholder="07405 428259"
               />
 
               <div>
@@ -262,10 +262,10 @@ export default function ContactPage() {
                       <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
                       <p className="mt-1 text-gray-600">Mon-Sat: 8AM-6PM</p>
                       <a
-                        href="tel:01234567890"
+                        href="tel:07405428259"
                         className="mt-2 inline-block text-lg font-medium text-primary-600 hover:text-primary-700"
                       >
-                        0123 456 7890
+                        07405 428259
                       </a>
                     </div>
                   </div>

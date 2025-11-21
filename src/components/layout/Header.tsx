@@ -41,10 +41,10 @@ export function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-3 group">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-primary-700 shadow-soft transition-all duration-300 group-hover:shadow-card">
-                  <span className="text-lg font-bold text-white font-grotesk">FF</span>
+                  <span className="text-lg font-bold text-white font-grotesk">BC</span>
                 </div>
                 <span className="text-xl font-bold text-text-primary font-grotesk hidden sm:block">
-                  Fresh Fiber
+                  Blowup Cleaners
                 </span>
               </Link>
             </div>
@@ -72,7 +72,7 @@ export function Header() {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex lg:items-center lg:space-x-3">
-              <Link href="tel:+441234567890">
+              <Link href="tel:+447405428259">
                 <button className="btn-outline text-sm py-2.5">
                   <svg
                     className="h-4 w-4"
@@ -166,7 +166,7 @@ export function Header() {
                   </Link>
                 ))}
                 <div className="mt-4 space-y-3 px-4">
-                  <Link href="tel:+441234567890" className="block">
+                  <Link href="tel:+447405428259" className="block">
                     <button className="btn-outline w-full justify-center">
                       <svg
                         className="h-4 w-4"

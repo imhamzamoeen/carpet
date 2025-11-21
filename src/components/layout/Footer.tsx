@@ -162,10 +162,10 @@ export function Footer() {
             <div>
               <h3 className="text-sm font-semibold text-white">Phone</h3>
               <a
-                href="tel:+441234567890"
+                href="tel:+447405428259"
                 className="mt-2 block text-sm text-gray-300 hover:text-white"
               >
-                +44 123 456 7890
+                +44 7405 428259
               </a>
             </div>
             <div>

@@ -142,7 +142,7 @@ const faqs: FAQ[] = [
       {
         question: 'How do I book a service?',
         answer:
-          'You can book online using our instant quote and booking form, which takes just a few minutes. Alternatively, you can call us at 0123 456 7890 or email us at info@methodclean.co.uk. We\'ll confirm your booking within 24 hours and send you all the details.'
+          'You can book online using our instant quote and booking form, which takes just a few minutes. Alternatively, you can call us at 07405 428259 or email us at info@methodclean.co.uk. We\'ll confirm your booking within 24 hours and send you all the details.'
       },
       {
         question: 'What is your cancellation policy?',
@@ -295,12 +295,12 @@ export default function FAQsPage() {
                       Contact Us
                     </Button>
                   </Link>
-                  <a href="tel:01234567890">
+                  <a href="tel:07405428259">
                     <Button size="lg" variant="secondary">
                       <svg className="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                       </svg>
-                      Call: 0123 456 7890
+                      Call: 07405 428259
                     </Button>
                   </a>
                 </div>

@@ -161,6 +161,82 @@ Optimize FAQs for AI Overviews (short, declarative answers).
 
 Add "speakable" schema for voice queries ("How much does carpet cleaning cost?", "Best carpet cleaners near me").
 
+**Speakable Schema Implementation:**
+
+Create a SpeakableSpecification schema to identify content sections suitable for text-to-speech (TTS) output on Google Assistant, Siri, Alexa, and other voice assistants:
+
+```typescript
+// src/components/structured-data/SpeakableSchema.tsx
+interface SpeakableSchemaProps {
+  serviceName: string
+  shortDescription: string
+  priceFrom: string
+}
+
+export function SpeakableSchema({ serviceName, shortDescription, priceFrom }: SpeakableSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${serviceName} Manchester`,
+    description: `${shortDescription}. Professional service in Manchester with same-day availability. Prices from ${priceFrom}.`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: [
+        '.speakable-headline',     // H1 service name
+        '.speakable-tldr',         // TL;DR summary
+        '.speakable-pricing',      // Pricing information
+        '.speakable-cta',          // Call to action
+      ],
+      // Alternative: use XPath selectors
+      xpath: [
+        '/html/head/title',
+        "//h1[@class='speakable-headline']",
+        "//div[@class='speakable-tldr']",
+      ],
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+```
+
+**Add Speakable CSS Classes to Content:**
+
+```typescript
+// H1 Headline
+<h1 className="speakable-headline">
+  {service.name}
+</h1>
+
+// TL;DR Summary (for LLMs and voice assistants)
+<div className="speakable-tldr">
+  <p>{service.shortDescription}. Professional service in Manchester with same-day availability, 100% satisfaction guarantee. Prices from {service.pricing.from}.</p>
+</div>
+
+// Pricing Section
+<div className="speakable-pricing">
+  <h3>Pricing</h3>
+  <span>{service.pricing.from}</span>
+</div>
+
+// Call to Action
+<div className="speakable-cta">
+  <button>Get Free Quote</button>
+  <a href="tel:+441234567890">Call Now</a>
+</div>
+```
+
+**Benefits:**
+- Critical for "near me" queries and voice-activated searches
+- Improves visibility in Google Assistant voice responses
+- Optimizes for featured snippets read aloud by smart speakers
+- Helps AI systems identify the most important content sections
+
 Interlink service pages, area pages, and FAQ pages → topical authority.
 
 Part 6: Engagement & Long-Term SEO

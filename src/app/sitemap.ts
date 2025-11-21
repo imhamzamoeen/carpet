@@ -8,7 +8,7 @@ import { MetadataRoute } from 'next'
 import { getAllServiceSlugs } from '@/lib/data/services'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://freshfibercleaning.co.uk'
+  const baseUrl = 'https://blowupcleaners.co.uk'
   const currentDate = new Date()
 
   // Static pages

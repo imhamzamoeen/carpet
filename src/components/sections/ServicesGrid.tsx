@@ -81,13 +81,13 @@ export function ServicesGrid() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-primary-600">Our Services</h2>
+          <h2 className="text-base font-semibold leading-7 text-primary-600">Cleaners in Manchester</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Professional Cleaning Services
+            Complete Cleaning Services for Your Home & Business
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            From carpets to cars, we provide expert cleaning services for homes and businesses
-            across Manchester and surrounding areas.
+            As trusted cleaners in Manchester, we provide professional carpet cleaning, upholstery cleaning,
+            deep cleaning, and commercial cleaning services across Manchester and surrounding areas.
           </p>
         </div>
 
