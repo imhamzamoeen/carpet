@@ -38,7 +38,17 @@
       "Bash(move:*)",
       "Bash(ren \"c:\\laragon\\www\\Carpet\\src\\middleware.ts\" \"proxy.ts\")",
       "Bash(del \"c:\\laragon\\www\\Carpet\\src\\middleware.ts\")",
-      "Bash(powershell -Command \"Get-ChildItem -Path src -Recurse -Include *.tsx,*.ts,*.json | ForEach-Object { (Get-Content $_FullName -Raw) -replace ''0123 456 7890'', ''07405 428259'' | Set-Content $_FullName -NoNewline }\")"
+      "Bash(powershell -Command \"Get-ChildItem -Path src -Recurse -Include *.tsx,*.ts,*.json | ForEach-Object { (Get-Content $_FullName -Raw) -replace ''0123 456 7890'', ''07405 428259'' | Set-Content $_FullName -NoNewline }\")",
+      "Bash(del /F /Q \"c:\\laragon\\www\\Carpet\\prisma\\schema.prisma\")",
+      "Bash(del /F /Q \"c:\\laragon\\www\\Carpet\\src\\lib\\prisma.ts\")",
+      "Bash(del /F /Q \"c:\\laragon\\www\\Carpet\\src\\lib\\db.ts\")",
+      "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\prisma'' -Recurse -Force\")",
+      "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\src\\lib\\prisma.ts'' -Force\")",
+      "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\src\\lib\\db.ts'' -Force\")",
+      "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\src\\app\\admin'' -Recurse -Force\")",
+      "Bash(powershell -Command \"Remove-Item -Path ''c:\\laragon\\www\\Carpet\\src\\actions'' -Recurse -Force\")",
+      "Bash(powershell -Command \"Test-Path ''c:\\laragon\\www\\Carpet\\src\\lib\\actions''\")",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "ask": []
