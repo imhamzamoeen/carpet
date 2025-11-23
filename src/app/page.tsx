@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import {
-  ServicesGrid,
   HowItWorks,
   WhyChooseUs,
   CTASection
@@ -8,6 +7,11 @@ import {
 import { HeroPremium } from '@/components/sections/HeroPremium'
 import CompaniesHouseTrust from '@/components/sections/CompaniesHouseTrust'
 import Certifications from '@/components/sections/Certifications'
+import { VideoServicesGrid } from '@/components/sections/VideoServicesGrid'
+import { videoServices } from '@/data/videoServices'
+
+// ISR Configuration - Revalidate every hour
+export const revalidate = 3600
 
 // SEO-optimized metadata for Cleaners in Manchester
 export const metadata: Metadata = {
@@ -264,9 +268,45 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
+      {/* VideoObject Schemas for each service */}
+      {videoServices.map((service) => {
+        const videoSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'VideoObject',
+          '@id': `https://blowupcleaners.co.uk/services/${service.slug}#video`,
+          'name': `${service.name} Demonstration - Blowup Cleaners Manchester`,
+          'description': service.description,
+          'thumbnailUrl': service.thumbnailUrl || 'https://blowupcleaners.co.uk/logo.png',
+          'uploadDate': '2025-01-15T00:00:00Z',
+          'duration': service.duration || 'PT30S',
+          'contentUrl': service.videoUrl,
+          'embedUrl': service.videoUrl,
+          'publisher': {
+            '@type': 'Organization',
+            '@id': 'https://blowupcleaners.co.uk/#organization',
+            'name': 'Blowup Cleaners',
+            'logo': {
+              '@type': 'ImageObject',
+              'url': 'https://blowupcleaners.co.uk/logo.png'
+            }
+          },
+          'inLanguage': 'en-GB',
+          'isFamilyFriendly': true,
+          'keywords': `${service.name.toLowerCase()}, cleaners manchester, professional cleaning, ${service.category} cleaning`
+        }
+
+        return (
+          <script
+            key={service.id}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+          />
+        )
+      })}
+
       {/* Page Content */}
       <HeroPremium />
-      <ServicesGrid />
+      <VideoServicesGrid />
       <HowItWorks />
       <WhyChooseUs />
       <CompaniesHouseTrust />

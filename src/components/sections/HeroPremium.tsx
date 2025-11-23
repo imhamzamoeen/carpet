@@ -1,8 +1,6 @@
 "use client"
 
-import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Spotlight } from '@/components/ui/aceternity/spotlight'
 import { TextGenerateEffect } from '@/components/ui/aceternity/text-generate-effect'
@@ -34,7 +32,7 @@ export function HeroPremium() {
   }
 
   return (
-    <section className="relative hero-spacing overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen py-20 lg:py-32 overflow-hidden bg-slate-950">
       {/* Spotlight Effect */}
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
@@ -201,8 +199,8 @@ export function HeroPremium() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <CardContainer className="inter-var">
-              <CardBody className="relative group/card hover:shadow-2xl hover:shadow-primary-500/[0.1] bg-black/40 border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border backdrop-blur-sm">
+            <CardContainer className="inter-var w-full">
+              <CardBody className="relative group/card hover:shadow-2xl hover:shadow-primary-500/[0.1] bg-black/40 border-white/[0.2] w-full h-auto rounded-xl p-6 border backdrop-blur-sm">
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-white mb-2"
@@ -218,13 +216,33 @@ export function HeroPremium() {
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <div className="relative overflow-hidden rounded-xl">
-                    <Image
-                      src="/images/hero-carpet-1.jpg"
-                      alt="Professional cleaners in Manchester - carpet, upholstery and deep cleaning services"
-                      width={600}
-                      height={450}
+                    {/* TikTok-Style Optimized Video - ENLARGED */}
+                    <video
+                      src="https://op9ck9o1huaxywp5.public.blob.vercel-storage.com/Blowup%20cleaner%20landing%20video.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
                       className="w-full h-auto object-cover group-hover/card:scale-105 transition-transform duration-500"
-                      priority
+                      style={{
+                        minHeight: '500px',
+                        maxHeight: '700px',
+                        aspectRatio: '16/10'
+                      }}
+                      onLoadedMetadata={(e) => {
+                        // TikTok-style optimization: Set playback rate for smooth performance
+                        const video = e.currentTarget;
+                        video.playbackRate = 1.0;
+                      }}
+                      onCanPlay={(e) => {
+                        // Ensure video plays smoothly on mobile
+                        const video = e.currentTarget;
+                        video.play().catch(() => {
+                          // Fallback for browsers that block autoplay
+                          console.log('Video autoplay blocked by browser');
+                        });
+                      }}
                     />
                     {/* Floating Badge */}
                     <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md rounded-lg shadow-xl p-3 border border-white/20">

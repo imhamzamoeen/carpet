@@ -7,6 +7,7 @@
 export { Hero } from './Hero';
 export { TrustBar } from './TrustBar';
 export { ServicesGrid } from './ServicesGrid';
+export { VideoServicesGrid } from './VideoServicesGrid';
 export { WhyChooseUs } from './WhyChooseUs';
 export { Process } from './Process';
 export { Testimonials } from './Testimonials';
